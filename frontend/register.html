@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<title>Registar</title>
+	</head>
+	<body>
+		<div class="logotipo">
+			<img class="logo" src="fundo-critical-arranjado.png" />
+		</div>
+		<div class="container">
+			<div class="container-register">
+				<h1 class="innovation-lab">Innovation Lab</h1>
+				<h4 id="h4-label">O lugar onde as tuas ideias vão mais longe</h4>
+				
+				<div class="loading hide">
+					<!-- spinner -->
+					<div class="spinner">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="div-warning-forgotpwd">
+					<!-- aqui entra a respetiva mensagem de erro -->
+				</div>
+				<div class="input-container-register">
+					<h4 class="container-title-init">Cria a tua conta e junta-te à equipa</h4>
+					<input type="text" id="firstName" placeholder="primeiro nome" />
+					<input type="text" id="lastName" placeholder="último nome" />
+					<input type="text" id="workplace" placeholder="local de trabalho" />
+					<input type="email" id="email" placeholder="email" />
+					<input type="password" id="password" placeholder="password" />
+					<input
+						type="password"
+						id="confirmPass"
+						placeholder="confirmar password"
+					/>
+					<button id="register-btn">CRIAR</button>
+					<div class="container-question">
+						<p id="question">
+							Já tens uma conta? <a id="login-link" href="index.html">Entrar!</a>
+						</p>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+
+		<script src="register.js"></script>
+		<script src="controller.js"></script>
+	</body>
+</html>

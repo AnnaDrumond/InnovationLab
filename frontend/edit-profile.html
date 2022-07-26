@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Editar perfil</title>
+	</head>
+	<body>
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown" >
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<button class="go-back-btn">VOLTAR</button>
+			<h4 class="edit-profile-h4">Editar o teu perfil</h4>
+			<div class="edit-profile-container">
+				<div class="extra-btns">
+					<button class="extra-btn-profile" id="manage-my-visibility">
+						GERIR VISIBILIDADE
+					</button>
+					<button class="extra-btn-profile hide" id="manage-my-password">
+						GERIR PALAVRAS-CHAVE
+					</button>
+				</div>
+				<div class="basic-info">
+					<span class="error-basic-info hide"></span>
+					<div class="basic-info-full-name">
+						<label
+							for="first-name"
+							class="label-user-infor"
+							id="first-name-label"
+							>Primeiro nome:</label
+						>
+						<input
+							type="text"
+							class="input-basic-info"
+							id="first-name"
+							placeholder="primeiro nome"
+						/>
+						<label for="last-name" class="label-user-infor" id="last-name-label"
+							>Último nome:</label
+						>
+						<input
+							type="text"
+							class="input-basic-info"
+							id="last-name"
+							placeholder="último nome"
+						/>
+					</div>
+					<div class="basic-info-second">
+						<label
+							for="workplace-profile"
+							class="label-user-infor"
+							id="workplace-label"
+							>Local de trabalho:</label
+						>
+						<input
+							type="text"
+							class="input-basic-info"
+							id="workplace-profile"
+							placeholder="local de trabalho"
+						/>
+						<label for="nickname" class="label-user-infor">Alcunha:</label>
+						<input
+							type="text"
+							class="input-basic-info"
+							id="nickname"
+							placeholder="alcunha"
+						/>
+					</div>
+				</div>
+				<hr class="profile-hr" />
+				<div class="profile-pic">
+					<img
+						src=""
+						alt="foto de perfil"
+						class="profile-pic-checker"
+						id="my-profile-picture"
+					/>
+
+					<!-- inicio do colapsável  class="collapse" -->
+					<details class="details">
+						<summary class="title" id="edit-user-profile-picture">
+							Editar foto de perfil
+						</summary>
+						<div class="edit-profile-picture-options">
+							<div class="picture-option" id="link-profile">
+								<p class="picture-option-label">Através de link:</p>
+								<input
+									type="text"
+									class="input-picture"
+									id="link-profile-pic"
+									placeholder="link da sua imagem"
+								/>
+								<button class="end-link-profile">CARREGAR</button>
+								<hr />
+								<p class="picture-option-label">Imagem do seu computador:</p>
+								<input
+									type="file"
+									class="input-picture"
+									id="image-input"
+									placeholder="link da sua imagem"
+									accept="image/jpeg, image/png, image/jpg"
+								/>
+								<hr />
+								<p class="picture-option-label">Selecionar um dos Avatares:</p>
+								<div class="titan-container">
+									<span class="critical-tital" id="1"
+										><img
+											src="./titans/avatar1vermelho.png"
+											class="profile-avatar"
+											width="50px"
+											height="80px"
+									/></span>
+									<span class="critical-tital" id="2"
+										><img
+											src="./titans/avatar2vermelho.png"
+											class="profile-avatar"
+											width="50px"
+											height="80px"
+									/></span>
+									<span class="critical-tital" id="3"
+										><img
+											src="./titans/avatar4vermelho.png"
+											class="profile-avatar"
+											width="50px"
+											height="80px"
+									/></span>
+									<span class="critical-tital" id="4"
+										><img
+											src="./titans/avatar3vermelho.png"
+											class="profile-avatar"
+											width="50px"
+											height="80px"
+									/></span>
+								</div>
+								<button class="no-photo">RETIRAR FOTOGRAFIA</button>
+							</div>
+						</div>
+					</details>
+					<!-- fim do colapsável   -->
+				</div>
+				<div class="more-user-info-profile">
+					<label for="user-availability" class="label-user-infor"
+						>Disponibilidade:</label
+					>
+					<input
+						type="text"
+						class="input-non-obligatory"
+						id="user-availability"
+						placeholder="disponibilidade"
+					/>
+					<label for="user-bio" class="label-user-infor">Biografia:</label>
+					<textarea
+						id="user-bio"
+						rows="4"
+						class="input-non-obligatory"
+						placeholder="biografia"
+					></textarea>
+				</div>
+			</div>
+			<div class="user-associations">
+				<!--  -->
+				<div class="association-skill">
+					<h6 class="association-title">Gerir skills associadas:</h6>
+					<span class="error-skill hide"></span>
+
+					<div class="no-result-skills">
+						<!-- aqui entra a respetiva mensagem -->
+					</div>
+					<!-- spans das skills selecionadas -->
+					<div class="span-skills hide" id="ids-skills">
+						<!-- aqui entram os spans -->
+					</div>
+					<!--  -->
+					<!-- <div class="associated-list" id="association-skill-list"></div> -->
+					<!--  -->
+					<div class="box-search-skills">
+						<input
+							type="text"
+							class="input-box-add-forum"
+							id="input-add-skill"
+							placeholder="procura a skill que queres associar"
+							autocomplete="chrome-off"
+						/>
+
+						<div class="results-skills">
+							<!-- Aqui entram as skills encontradas-->
+						</div>
+					</div>
+					<!-- fim  area de busca ativa por skills -->
+					<!--<button class="button-associate" id="associate-skill">
+						ASSOCIAR
+					</button>-->
+					<p class="question-skill">
+						A skill que procuras não existe?
+						<span class="question-click-skill">Cria uma nova Skill!</span>
+					</p>
+					<div class="create-new-skill hide">
+						<span class="empty-skill hide"></span>
+						<input
+							type="text"
+							class="input-box-add-forum"
+							id="input-new-skill"
+							placeholder="título da nova skill"
+						/>
+						<button class="button-associate" id="create-new-skill">
+							CRIAR
+						</button>
+						<button class="button-associate" id="cancel-new-skill">
+							CANCELAR
+						</button>
+						<div class="select-box">
+							<div class="options-container">
+								<div class="option">
+									<input
+										type="radio"
+										class="radio"
+										id="kowledge"
+										name="kowledge"
+									/>
+									<label for="kowledge">Conhecimento</label>
+								</div>
+								<div class="option">
+									<input
+										type="radio"
+										class="radio"
+										id="software"
+										name="software"
+									/>
+									<label for="software">Software</label>
+								</div>
+								<div class="option">
+									<input
+										type="radio"
+										class="radio"
+										id="hardware"
+										name="hardware"
+									/>
+									<label for="hardware">Hardware</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="tools" name="tools" />
+									<label for="tools">Ferramentas</label>
+								</div>
+							</div>
+
+							<div class="selected">
+								<!--o que está escrito na caixa onde vai ficar o texto selecionado-->
+								Tipo de Skill
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---->
+				<div class="association-interest">
+					<h6 class="association-title">Gerir interesses associados:</h6>
+					<span class="error-interest hide"></span>
+					<!-- spans das skills selecionadas -->
+					<!-- <div class="associated-list" id="association-interest-list"></div> -->
+					<div class="no-result-interest">
+						<!-- aqui entra a respetiva mensagem -->
+					</div>
+
+					<div id="ids-interests" class="span-interests hide">
+						<!-- aqui entram os spans -->
+					</div>
+
+					<!-- area de busca ativa por interesses -->
+					<div class="box-search-interests">
+						<input
+							type="text"
+							class="input-box-add-forum"
+							id="input-add-interest"
+							placeholder="procura o interesse que queres associar"
+							autocomplete="chrome-off"
+						/>
+
+						<div class="results-interests">
+							<!-- Aqui entram as palavras encontradas-->
+							<!-- fim results -->
+						</div>
+						<!-- fim  -->
+					</div>
+					<p class="question-skill">
+						O interesse que procuras não existe?
+						<span class="question-click-int">Cria um novo interesse!</span>
+					</p>
+					<div class="create-new-interests hide">
+						<span class="empty-interest hide"></span>
+						<input
+							type="text"
+							class="input-box-add-forum"
+							id="input-new-interests"
+							placeholder="título do novo interesse"
+						/>
+						<button class="button-associate" id="create-new-interest">
+							CRIAR
+						</button>
+						<button class="button-associate" id="cancel-new-interest">
+							CANCELAR
+						</button>
+					</div>
+					<!--<button class="button-associate" id="associate-interest">
+						ASSOCIAR
+					</button>-->
+				</div>
+			</div>
+			<button class="save-profile">GUARDAR</button>
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+		<script src="utilities.js"></script>
+		<script src="controller.js"></script>
+		<script src="editProfile.js"></script>
+	</body>
+</html>

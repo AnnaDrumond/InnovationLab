@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Feed Ideias e Necessidades</title>
+	</head>
+	<body>
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown" >
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<p class="visitor-warning hide">Ainda não validaste teu registo!</p>
+			<div class="filter">
+				<!-- inicio do colapsável  class="collapse" -->
+				<details class="details">
+					<summary class="title" id="filter-title">Filtrar</summary>
+
+					<div class="filter-forum">
+						<div class="filter-skill-forum">
+							<h6 class="filter-h6">Filtrar por Skill:</h6>
+
+							<div class="no-result-skills">
+								<!-- aqui entra a respetiva mensagem -->
+							</div>
+							<div id="ids-skills" class="span-skills hide">
+								<!--<span class="span-to-search" id="1">Teste</span>
+								<span class="span-to-search" id="2">Teste</span>
+								<span class="span-to-search" id="3">Teste</span> -->
+							</div>
+
+							<!-- area de busca ativa por skills -->
+							<div class="box-search-skills">
+								<!-- input de pesquisas por skills -->
+								<input
+									type="text"
+									id="input-skill"
+									class="search-skills"
+									name="search"
+									placeholder="pesquise por skills"
+									autocomplete="chrome-off"
+								/>
+
+								<div class="results-skills">
+									<!-- Aqui entram as palavras encontradas-->
+								</div>
+							</div>
+
+							<!-- fim  area de busca ativa por skills -->
+						</div>
+
+						<div class="filter-interest-forum">
+							<h6 class="filter-h6">Filtrar por Interesse:</h6>
+
+							<div class="no-result-interest">
+								<!-- aqui entra a respetiva mensagem -->
+							</div>
+
+							<div id="ids-interests" class="span-interests hide">
+								<!-- <span class="span-to-search" id="1">Teste</span>
+								<span class="span-to-search" id="2">Teste</span>
+								<span class="span-to-search" id="3">Teste</span> -->
+							</div>
+
+							<!-- area de busca ativa por interesses -->
+							<div class="box-search-interests">
+								<!-- input de pesquisas por interesses -->
+								<input
+									type="text"
+									id="input-interest"
+									class="search-interests"
+									name="search"
+									placeholder="pesquise por interesses"
+									autocomplete="chrome-off"
+								/>
+
+								<div class="results-interests">
+									<!-- Aqui entram as palavras encontradas-->
+									<!-- fim results -->
+								</div>
+								<!-- fim  -->
+							</div>
+						</div>
+					</div>
+					<!-- fim de class="filter-forum" -->
+
+					<div class="filter-category-forum">
+						<h6 class="filter-h6">Mostrar:</h6>
+						<div class="buttons-category">
+							<button class="forum-category" id="idea-category">IDEIA</button>
+							<button class="forum-category" id="both-category">AMBOS</button>
+							<button class="forum-category" id="necessity-category">
+								NECESSIDADE
+							</button>
+						</div>
+					</div>
+					<button id="apply-filter">FILTRAR FORUM</button>
+					<button id="clear-filters">LIMPAR FILTROS</button>
+				</details>
+				<!-- fim do colapsável   -->
+			</div>
+			<div class="order-forum">
+				<h6 class="order-title">Ordenar:</h6>
+				<div class="order-by-buttons">
+					<button class="order-by" id="order-by-creation">
+						<span class="button-text">
+							DATA DE CRIAÇÃO
+						</span>
+						<span class="triangle-aux"><i class="fa-solid fa-caret-down visibily-hidden"></i></span>
+					</button>
+					<button class="order-by" id="order-by-last-updated">
+						<span class="button-text">
+							ÚLTIMA ATUALIZAÇÃO
+						</span>
+						<span class="triangle-aux"><i class="fa-solid fa-caret-down visibily-hidden"></i></span>
+					</button>
+					<button class="order-by" id="order-by-votes">
+						<span class="button-text-votes">
+							VOTAÇÃO
+						</span>
+						<span class="triangle-aux"><i class="fa-solid fa-caret-down visibily-hidden"></i></span></button>
+				</div>
+			</div>
+
+			<div class="warning-container">
+				<!-- Aqui entra a respetiva mensagem de warning  -->
+			</div>
+			<div class="content-container">
+				<!-- aqui entram os forums gerados dinamicamente pelo javaScript  -->
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+		<script src="utilities.js"></script>
+		<script src="controller.js"></script>
+		<script src="feedForum.js"></script>
+	</body>
+</html>

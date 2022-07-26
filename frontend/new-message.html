@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Nova mensagem</title>
+	</head>
+	<body>
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown" >
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="body">
+			<button class="go-back-btn">VOLTAR</button>
+			<div class="new-message-container">
+				<p class="new-message-label">Nova mensagem</p>
+				<p class="no-empty-fields">
+					<!-- aqui entra a respetiva mensagem -->
+				</p>
+				<!--  -->
+				<div class="new-messages-input">
+					<!--  -->
+					<div class="no-result">
+						<!-- aqui entra a respetiva mensagem -->
+					</div>
+					<div class="span-users hide" id="ids-users">
+						<!-- aqui entram os spans -->
+						<!-- <span class="span-to-skill">Anna Faria</span>
+                        <span class="span-to-skill">Anna Drumond</span> -->
+					</div>
+					<!--  -->
+					<div class="box-search-users">
+						<input
+							type="text"
+							class="message-input"
+							id="input-receiver"
+							placeholder="destinatário"
+							autocomplete="chrome-off"
+						/>
+						<div class="results-users">
+							<!-- Aqui entram os users encontrados-->
+						</div>
+					</div>
+					<!--  -->
+					<textarea
+						id="input-new-message"
+						rows="10"
+						class="message-input"
+						placeholder="nova mensagem"
+					></textarea>
+				</div>
+				<button class="send-btn">
+					ENVIAR <i class="fa-solid fa-paper-plane paper-plane"></i>
+				</button>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+		<script src="utilities.js"></script>
+		<script src="controller.js"></script>
+		<script src="new-message.js"></script>
+	</body>
+</html>

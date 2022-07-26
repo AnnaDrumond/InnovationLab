@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<title>Reset da password</title>
+	</head>
+	<body>
+		<div class="logotipo">
+			<img class="logo" src="fundo-critical-arranjado.png" />
+		</div>
+		<div class="container">
+			<div class="container-reset-pwd">
+				<h1 class="innovation-lab">Innovation Lab</h1>
+				<h4 id="h4-label">O lugar onde as tuas ideias vão mais longe</h4>
+				<div class="div-warning-forgotpwd">
+					<!-- aqui entra a respetiva mensagem de erro -->
+				</div>
+				<div class="reset-pwd-container">
+					<h4 class="container-title-init">Redefine a tua password!</h4>
+					<input type="password" id="password" placeholder="nova password" />
+					<input
+						type="password"
+						id="confirm-password"
+						placeholder="confirme a password"
+					/>
+					<div id="forgot-pwd-container">
+						<button id="reset-pwd">REDEFINIR</button>
+						<button id="return-btn">VOLTAR</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="reset-pwd.js"></script>
+		<script src="controller.js"></script>
+	</body>
+</html>

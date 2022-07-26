@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<title></title>
+		<!--MUDAR O NOME PELO JS-->
+		<!--TITULO DO PROJETO - ok-->
+	</head>
+	<body>
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i
+					><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i
+					><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown">
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="body">
+			<div class="project">
+				<p class="already-have-project hide">
+					<!--  -->
+				</p>
+				<div class="top-info">
+					<div class="project-owner">
+						<!--  -->
+						<img id="owner-image" />
+						<span class="owner-name" id="project-owner-name">
+							<!--  -->
+						</span>
+						<hr id="see-project-info-user" />
+						<span class="project-status visibily-hidden"
+							>Projeto terminado</span
+						>
+					</div>
+					<button class="option-project" id="wanna-work">
+						QUERO SER MEMBRO
+					</button>
+					<button class="option-project hide" id="edit">EDITAR</button>
+					<button class="option-project hide" id="manage-users">
+						GERIR MEMBROS
+					</button>
+				</div>
+				<div class="project-content">
+					<p class="see-project-title"></p>
+					<p class="see-project-description"></p>
+
+					<p class="creation-see-project">
+						Data de criação:
+						<span id="creation-see-project">
+							<!--  -->
+						</span>
+					</p>
+
+					<p class="members-label">Membros:</p>
+					<div class="member-list" id="section-members-list">
+						<!-- inicio de um membro -->
+						<!-- <div class="member">
+							<img
+								id="member-image"
+								src="https://randomuser.me/api/portraits/women/34.jpg"
+							/>
+							<span class="member-name" id="1@mail.pt"> Susana Castro </span>
+						</div> -->
+						<!-- fim de um membro -->
+					</div>
+
+					<p class="associated-label-see-project hide" id="p-associated-necessities">
+						Necessidades associadas:
+					</p>
+					<div class="associated-div-see-project hide" id="section-span-necessities">
+						<!-- <span class="span-title" id="1">
+                        Teste necessidade
+                    </span>
+                     -->
+					</div>
+					<p class="associated-label-see-project hide" id="p-associated-ideas">
+						Ideias associadas:
+					</p>
+					<div class="associated-div-see-project hide" id="section-span-ideas">
+						<!-- <span class="span-title" id="1">
+                        Teste ideia
+                    </span>
+                    -->
+					</div>
+					<p class="associated-label-see-project" id="p-associated-skills">
+						Skills associadas:
+					</p>
+					<div class="associated-div-see-project" id="section-span-skills">
+						<!-- <span class="span-title" id="1">
+                        Teste SKILL MANO
+                    </span>
+                     -->
+					</div>
+
+					<p class="title-resources">Recursos necessários:</p>
+					<p class="text-resources"></p>
+
+					<p class="title-execution">Plano de execução:</p>
+					<p class="text-execution"></p>
+
+					<p class="see-project-votes">
+						Número de votos:
+						<span id="project-votes"> <!--  --> </span
+						><i class="fa-solid fa-thumbs-up" id="icon-votes-seeProject"></i>
+					</p>
+					<div class="project-buttons">
+						<!--  -->
+						<button class="project-btn" id="vote-project">
+							ADICIONAR VOTO
+							<i class="fa-solid fa-thumbs-up like pulse" id="likeBtn"></i>
+						</button>
+
+						<button class="project-btn hide" id="voted-project">
+							RETIRAR VOTO
+							<i class="fa-solid fa-thumbs-up like pulse" id="likedBtn"></i>
+						</button>
+
+						<!--  -->
+
+						<button class="project-btn" id="favorite-project">
+							ADICIONAR FAVORITO
+							<i class="fa-solid fa-heart pulse" id="heartBtn"></i>
+						</button>
+
+						<button class="project-btn hide" id="favorited-project">
+							REMOVER FAVORITO
+							<i class="fa-solid fa-heart pulse" id="heartdBtn"></i>
+						</button>
+
+						<!--  -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+
+		<script src="utilities.js"></script>
+		<script src="controller.js"></script>
+		<script src="seeProject.js"></script>
+	</body>
+</html>

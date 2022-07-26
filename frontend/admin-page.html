@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Administração</title>
+	</head>
+	<body>
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown" >
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<h2 class="admin-page">Administração</h2>
+			<!-- inicio do colapsável  class="collapse" -->
+			<details class="details">
+				<summary class="title-security" id="security-section">
+					Gerir sessões:
+				</summary>
+
+				<div class="container-admin">
+					<h4 class="manage-timeout">Gerir timeout da sessão (minutos):</h4>
+					<span class="alterations-feedback visibily-hidden" id="timeout-warning"
+						>Alterações guardadas!</span
+					>
+					<div class="mini-container">
+						<input
+							type="number"
+							class="input-admin"
+							placeholder="timeout da sessão"
+						/>
+						<button class="save-admin">GUARDAR</button>
+					</div>
+				</div>
+			</details>
+			<!-- fim do colapsável   -->
+
+			<!-- inicio do colapsável  class="collapse" -->
+			<details class="details">
+				<summary class="title-security" id="security-section">
+					Gerir utilizadores:
+				</summary>
+
+				<div class="container-admin" id="final-container">
+					<h4 class="manage-users">Gerir utilizadores:</h4>
+					<span class="alterations-feedback visibily-hidden" id="feedback-manage"
+					>Pedimos desculpa, mas ocorreu um erro! Tenta novamente mais tarde!</span>
+					<div class="search-users-admin">
+						<div class="no-result-users">
+							<!-- QUANDO NÃO ENCONTRAMOS O USER APARECE MENSGAEM -->
+						</div>
+						<div class="box-search-user-admin">
+							<input
+								type="text"
+								class="input-name-or-nickname-one-admin"
+								id="name-or-nickname-admin-page"
+								placeholder="Pesquise pelo utilizador"
+							/>
+							<button class="search-user">PESQUISAR</button>
+							<div class="results-user-admin hide">
+								<!-- AQUI ENTRAM OS USERS ENCONTRADOS -->
+							</div>
+						</div>
+					</div>
+					<div class="admin-btns-container">
+						<button class="button-admin-page" id="only-standards">
+							UTILIZADORES STANDARD
+						</button>
+						<button class="button-admin-page" id="only-admins">
+							UTILIZADORES ADMINISTRADORES
+						</button>
+						<button class="button-admin-page" id="everyone">
+							TODOS OS UTILIZADORES
+						</button>
+					</div>
+					<div class="all-users-in-il">
+						<div class="users-list-admin">
+							<!--<div class="user-to-see">
+								<img src="https://randomuser.me/api/portraits/women/32.jpg" alt="foto do utilizador" class="user-image-admin">
+								<span class="user-name-admin">Madalena Coimbra</span>
+								<button class="admin-btn-action" id="promote">TORNAR ADMINISTRADOR</button>
+								<button class="admin-btn-action hide" id="despromote">TORNAR PARTICIPANTE</button>
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</details>
+			<!-- fim do colapsável   -->
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+		<script src="utilities.js"></script>
+		<script src="controller.js"></script>
+		<script src="admin-page.js"></script>
+	</body>
+</html>

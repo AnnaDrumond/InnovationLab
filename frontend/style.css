@@ -1,0 +1,4137 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: rgb(68, 67, 67);
+  background-color: white;
+}
+
+/* tirar cursor piscando
+    incompatibilidade com o editor Quill
+   caret-color: transparent;*/
+
+summary{
+    cursor: pointer;
+} 
+
+.sorted{
+    float: left;
+    margin-left: 2%;
+}
+
+.button-text, .button-text-votes, .button-text-project{
+    float: left;
+    width: 46%;
+    margin-left: 27%;
+    margin-top: 0.5%;
+
+}
+
+.info-error-reset-pwd{
+    float: left;
+	margin-top:5%;
+	width:74%;
+}
+
+.button-text-votes{
+    width: 20%;
+    margin-left: 40%;
+}
+
+.button-text-project{
+    width: 30%;
+    margin-left: 35%;
+}
+
+.hide{
+    display: none;
+}
+
+.visibily-hidden{
+    visibility: hidden;
+}
+
+.dropdown-arrow{
+    float: right;
+    margin-top: 0.4%;
+    margin-right: 1.5%;
+}
+
+.notification:hover {
+   transform: scale(1.01);
+   transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.logotipo{
+    background-color: #666666;
+    width: 49%;
+    float: left;
+    height: 100%;
+}
+
+.logo{
+    float: right;
+    width: 100%;
+}
+
+.container{
+    float: left;
+    height: 100%;
+    width: 51%;
+}
+
+.container-info, .container-register,
+.container-reset-pwd{
+    margin-left: 10%;
+    margin-top: 20%;
+    float: left;
+}
+
+.reset-pwd-container{
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    width: 60%;
+    padding: 1%;
+    margin-top: 3%;
+}
+
+.container-title-init{
+    margin: 1%;
+    float: left;
+}
+
+#login-label{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1.5em;
+}
+
+#h4-label{
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+#forgot-pwd-container{
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.input-container-register, .container-login,
+.container-forgot-pwd{
+    background-color: whitesmoke;
+    float: left;
+    width: 60%;
+    border-radius: 8px;
+    padding: 1%;
+    margin-top: 3%;
+}
+
+#email, #password, #login, #forgot-pwd, #firstName, #lastName, #confirmPass, #workplace, #register-btn, #send-btn, #return-btn,
+#confirm-password, #reset-pwd, .button-return, #login-link{
+    width: 50%;
+    border: none;
+    font-size: 1.5em;
+    margin-top: 1%;
+    border-radius: 8px;
+ 
+}
+
+#email, #password, #login, #forgot-pwd, #firstName, #lastName, #confirmPass, #workplace, #confirm-password, #register-btn, #login-link{
+    width: 98%;
+    float: left;
+    margin: 1%;
+
+}
+
+#login, #register-btn, #send-btn, #return-btn, #reset-pwd, .button-return{
+    font-size: 17px;
+    padding: 7px;
+    float: left;
+    transition: all 0.4s;
+}
+
+#reset-pwd, #return-btn, #register-btn, #login, #send-btn{
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+#login:hover, #register-btn:hover, #send-btn:hover, #return-btn:hover, #reset-pwd:hover, .button-return:hover{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#forgot-pwd, #register, #question, #login-link{
+    font-size: 0.8em;
+    margin-top: -5px;
+    width: 100%;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    color: #c81d25;
+    transition: all 0.4s;
+}
+
+#register{
+    float: initial;
+}
+
+#forgot-pwd:hover, #register:hover, #login-link:hover{
+    color: #333;
+    transition: 0.4s all;
+    text-decoration: underline;
+}
+
+.container-question{
+    width: 100%;
+    float: left;
+
+}
+
+#question{
+    width: 98%;
+    margin: 1%;
+    float: left;
+    text-decoration: none;
+    font-weight: normal;
+    color: #666666;
+}
+
+#register, #login-link{
+    width: fit-content;
+    margin-left: 3px;
+    margin-top: 0%;
+    font-size: 1em;
+}
+
+#login-link{
+    float: none;
+}
+
+.innovation-lab{
+    font-size: 3.5em;
+}
+
+.container-validate-register{
+    margin-top: 10%;
+    width: 65%;
+}
+
+#validate_register-info{
+    font-size: 1.3em;
+}
+
+.information-after-register{
+    margin-left: 10%;
+    width: 50%;
+    float: left;
+
+}
+
+.button-return{
+    margin-left: 10%;
+}
+
+/*DEPOIS DO USER AUTENTICADO, PASSA PARA AS OUTRAS PÁGINAS*/
+/*MENU*/
+.menu{
+    width: 100%;
+    background-color: whitesmoke;
+    float: left;
+    /* position: fixed; */
+}
+
+.tooltip{
+    border: none;
+    font-size: 25px;
+    color: #c81d25;
+    
+}
+
+[data-tooltip] {
+    position: relative;
+  }
+  
+  [data-tooltip]:after {  
+    display: none;
+    position: absolute;
+   /* top: -5px;*/
+   margin-top: 5px;
+    padding: 8px;
+    border-radius: 3px;
+    left: calc(100% - 37px);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+   background-color: whitesmoke;
+    color: #333;
+    font-size: 0.9em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+  }
+  
+  [data-tooltip]:hover:after {
+    display: block;
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+  }
+
+.brand{
+    color: #c81d25;
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+    margin-top: 1%;
+    margin-left: 6%;
+    width: fit-content;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.icon-menu{
+    display: flex;
+    margin-top: 1%;
+    float: right;
+    width: 20%;
+    margin-right: 6%;
+    color: #c81d25;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notification-number, .message-number{
+    font-size: 0.6em;
+    background-color: #333;
+    width: 100%;
+    right: -12px;
+    top: 9px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    height: 87%;
+    color: whitesmoke;
+}
+
+.fa-solid:hover{
+    color: #a21920;
+    transition: all 0.4s;
+      /* Começa a animação shake e fá-la durar por 0.5 segundos */
+  animation: shake 0.5s;
+
+  /* Quando a animação terminar, fá-la iniciar novamente */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  input:focus { 
+    outline: none !important;
+    border-color:  #c81d25;
+    box-shadow: 0 0 3px #c81d25;
+}
+
+/*Mudar a tag para <details class="details5">*/
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-1.25em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.details[open] {
+  animation-name: fadeInDown;
+  animation-duration: 0.8s;
+}
+  
+
+.fa-thumbs-up{
+    color: #c81d25;
+}
+
+.fa-solid:hover{
+    color: #a21920;
+    transition: all 0.4s;
+}
+
+#profile-image{
+    border-radius: 50%;
+    width: 5vh;
+}
+
+#box-photo-dropdown{
+    width: 15%;
+    right: 6%;
+}
+
+.visitor-warning{
+    color: #c81d25;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fa-solid{
+    margin-top: -1%;
+    font-size: 25px;
+}
+
+/*DROPDOWN MENU*/
+
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button*/
+  
+  .dropdown-content {
+    font-size: 1em;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 10;
+    border-radius: 8px;
+    /*margin-top: 1%;*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 4px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  /*.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }*/
+
+  /*FIM DROPDOWN*/
+
+/*FIM DO MENU*/
+
+/*FILTRO FEED FORUM / CRIAR FORUM  E PROJETO*/
+
+.filter{
+    margin-top: 0.5%;
+    width: 100%;
+    float: left;
+    border-radius: 8px;
+    background-color: #e7e3e3;
+}
+
+.filter-forum, .filter-project, .filter-category-forum{
+    width: 100%;
+    float: left;
+}
+
+.buttons-project-options{
+    float: left;
+    width: 100%;
+    margin-top: 0.25%;
+}
+
+.options-project{
+    background-color: #a21920;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    font-size: 0.9em;
+    width: 15%;
+    float: right;
+    margin-left: 0.5%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.options-project:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+}
+
+#filter-title, .order-title{
+    width: 99%;
+    float: left;
+    font-size: 1.3em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    color: #333;
+}
+
+.filter-skill-forum, .filter-interest-forum,
+.filter-skill-project, .filter-idea-project, .filter-necessity-project{
+    float: left;
+    width: 50%;
+}
+
+.filter-skill-project, .filter-idea-project, .filter-necessity-project{
+    width: 33%;
+}
+
+.filter-h6{
+    width: 98%;
+    float: left;
+    font-size: 1em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 2%;
+}
+
+#ids-skills, #ids-interests, 
+#ids-ideas, #ids-necessity,
+#ids-users{
+    float: left;
+    width: 96%;
+    margin-left: 2%;
+}
+
+#input-skill, #input-interest, #input-idea, #input-necessity, #input-member, #input-skill-proj, #input-idea-proj, #input-necessity-proj{
+    float: left;
+    width: 97.5%;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border-style: none;
+    padding-left: 1%;
+
+}
+
+#input-member{
+    width: 96.5%;
+}
+
+#input-skill-proj, #input-idea-proj, #input-necessity-proj{
+    width: 96.5%;
+}
+
+.filter-category-forum{
+    float: left;
+}
+
+.buttons-category{
+    display: flex;
+    justify-content: space-between;
+    float: left;    
+    width: 96%;
+    margin-left: 2%;
+}
+
+.buttons-filter{
+    float: left;
+    width: 98%;
+    margin: 1%;
+}
+
+.forum-category, #apply-filter, #clear-filters, .order-by, .favorites-btn, .registered-btn, .order-by-project{
+    border: none;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 0.5%;
+    width: 33%;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.forum-category:hover, #apply-filter:hover, #clear-filters:hover, .order-by:hover, .favorites-btn:hover, .registered-btn:hover, .order-by-project:hover{
+    background-color: whitesmoke;
+    color: #333;
+    transition: all 0.4s;
+}
+
+#apply-filter, #clear-filters{
+    background-color: #c81d25;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 48%;
+    color: whitesmoke;
+    margin-bottom: 1%;
+    float: left;
+}
+
+#apply-filter:hover, #clear-filters:hover{
+    background-color: whitesmoke;
+    color: #c81d25;
+}
+
+.span-to-search{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    margin: 1px;
+    border-radius: 4px;
+    padding: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.span-to-skill{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    margin-right: 0.5%;
+    border-radius: 4px;
+    padding: 0.5%;
+}
+
+.span-to-user{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    margin-right: 0.5%;
+    border-radius: 4px;
+    padding: 0.3%;
+}
+
+.span-to-necessity{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    margin-left: 2%;
+    border-radius: 4px;
+    padding: 0.5%;
+}
+
+/*ESTILOS PARA A BUSCA ATIVA*/
+
+.results-skills  {
+    padding: 0px;
+}
+  
+  .results-skills ul {margin: 0; padding: 0; }
+  .results-skills ul li {
+    list-style: none;
+    border-radius: 3px;
+    opacity: 0;
+    display: none;
+    padding: 2px 12px;
+    transition: all 0.4s;
+  }
+
+  .ul-skills, .ul-interests{
+    float: left;
+    width: 100%;
+  }
+  
+  .show .results-skills ul li {
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+    opacity: 1;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .show ul  {
+    overflow-y: scroll;
+    max-height: 100px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 0.5%;
+  }
+
+  .show ul::-webkit-scrollbar { /*para criar o scroll customizado (arredondado e de cor escura/) dentro da combo box*/
+    width: 8px;
+    background: #b31c23;
+    border-radius: 8px;
+  }
+  
+  .show ul::-webkit-scrollbar-thumb { /*para criar o cursos que sobre e desce com o scroll, que também fica arredondado e tem uma cor cinzenta escura*/
+    background: #E0AFA0;
+    border-radius: 8px;
+  }
+
+  
+  .show .results-skills, 
+  .show .results-ideas, 
+  .show .results-necessity, 
+  .show .results-member,
+  .show .results-users {
+    padding: 10px;
+    /* margin-top: 4%; */
+    /* position: absolute; */
+    width: 97%;
+  }
+
+
+  
+  .li-skill:hover, 
+  .li-ideas:hover, 
+  .li-necessity:hover,
+   .li-member:hover,
+   .li-user:hover,
+   .li-workplace:hover {
+    background: #E0AFA0;
+    transition: all 0.4s;
+  }
+
+  .delete-icon,  .edit-icon{
+    font-size: 1em;
+    margin-left: 0.5%;
+  }
+
+  .delete-icon:hover, 
+  .edit-icon:hover, 
+  .project-title:hover{
+    cursor:pointer;
+  }
+
+
+  .results-interests, 
+  .results-ideas,
+  .results-users {
+    padding: 0px;
+}
+  
+  .results-interests ul, 
+  .results-users ul,
+  .results-ideas ul, 
+  .results-necessity ul, 
+  .results-member ul {margin: 0; padding: 0; }
+
+  .results-interests ul li, 
+  .results-users ul li, 
+  .results-ideas ul li, 
+  .results-necessity ul li, 
+  .results-member ul li {
+    list-style: none;
+    border-radius: 3px;
+    opacity: 0;
+    display: none;
+    padding: 2px 12px;
+    transition: all 0.4s;
+  }
+
+  .ul-interests, 
+  .ul-ideas, 
+  .ul-necessity, 
+  .ul-member,
+  .ul-users, 
+  .ul-workplace{
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .show .results-interests ul li, 
+  .show .results-users ul li, 
+  .show .results-ideas ul li, 
+  .show .results-necessity ul li, 
+  .show .results-member ul li{
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+    opacity: 1;
+    display: block;
+    border-radius: 8px;
+  }
+  .show .results-interests, 
+  .show .results-ideas, 
+  .show .results-users,
+  .show .results-necessity, 
+  .show .results-member {
+    padding: 10px;
+    /* margin-top: 4%; */
+    /* position: absolute; */
+    width: 97%;
+  }
+  .li-interest:hover,
+  .li-ideas:hover, 
+  .li-necessity:hover, 
+  .li-member:hover,
+  .li-user:hover,
+  .li-workplace:hover {
+    background: #E0AFA0;
+    transition: all 0.4s;
+  }
+
+ #userImage-active-search{
+    margin-right: 0.4%;
+    margin-top: 0.2%;
+    width: 2%;
+    border-radius: 50%;
+    float: left;
+ }
+
+ .userImage-span-search{
+    /* padding-right: 1%; */
+    width: 1.48%;
+    height:4%;
+    border-radius: 50%;
+    margin-left: 0.3%;
+    /* float: left; */
+ }
+
+  /*Aviso de que não encontrou resultado para o filtro aplicado*/
+  .warning-text{
+    float: left;
+    margin-top: 17%;
+    font-size: 1.5em;
+    color: #c81d25;
+    /* text-align: justify; */
+    padding-left: 30%;
+  }
+
+  /*Alterar cor e colocar placeholder negrito*/
+  
+.warning-repeated::-webkit-input-placeholder {
+    color:#c81d25;
+    font-weight: bold;
+}
+.warning-repeated::-ms-input-placeholder {
+color:#c81d25;
+font-weight: bold;
+}
+.warning-repeated:-ms-input-placeholder {
+color:#c81d25;
+font-weight: bold;
+}
+
+.change-color::-webkit-input-placeholder {
+    color:#c81d25;
+    font-weight: bold;
+}
+.change-color::-ms-input-placeholder {
+color:#c81d25;
+font-weight: bold;
+}
+.change-color:-ms-input-placeholder {
+color:#c81d25;
+font-weight: bold;
+}
+
+/*FIM FILTRO FEED*/
+
+/*ORDENAR FORUM OU PROJETO*/
+
+.order-forum, .order-project{
+    margin-top: 1%;
+    float: left;
+    background-color: #b31c23;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.order-title{
+    margin-bottom: 0.5%;
+    color: whitesmoke;
+}
+
+.order-by-buttons{
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.order-by, .order-by-project{
+    background-color: whitesmoke;
+    color: #333;
+    float: left;
+    transition: all 0.4s;
+    margin: 0.15%;
+}
+
+.order-by:hover, .order-by-project:hover{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    transition: 0.4s all;
+}
+
+.order-by-project{
+    width: 49.5%;
+    margin: 0.25%;
+}
+
+/*FIM ORDENAR FORUM*/
+
+.body{
+    width: 87%;
+    float: left;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+    min-height: 86%;
+}
+
+/*FEED DE FORUMS E PROJETOS*/
+.content-container{
+    margin-top: 0.5%;
+    float: left;
+    width: 100%;
+    /*margin-bottom: 10%;*/ 
+}
+
+.forum-simple, .project-simple{
+    width: 100%;
+    float: left;
+    margin-top: 0.5%;
+    /*box-shadow: 0px 8px 8px 0px rgba(144, 144, 144, 0.2);*/
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.forum-type, .forum-title, .project-type, .project-title{
+    margin-top: 0.5%;
+    width: 85%;
+    padding-left: 1%;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.forum-votes, .project-votes{
+    float: right;
+    margin-right: 2%;
+    margin-top: -1%;
+}
+
+.forum-title, .project-title{
+    width: 98%;
+    cursor: pointer;
+}
+
+.user-info, .forum-dates, .project-dates {
+    float: left;
+    margin-top: 0.5%;
+    width: 50%;
+    margin-bottom: 2%;
+}
+
+
+
+.insert-hand:hover {
+    cursor: pointer;
+}
+
+#forum-owner-image{
+    float: left;
+    width: 10%;
+    border-radius: 50%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.forum-owner-name, .forum-owner-nickname, .project-owner-name, .project-owner-nickname{
+    float: left;
+    margin-left: 3%;
+    font-size: 1em;
+    font-weight: bold;
+    width: 85%;
+    margin-bottom: 0;
+}
+
+.forum-owner-nickname{
+    margin-bottom: 1%;
+    margin-top: 0;
+}
+
+.forum-dates, .project-dates{
+    float: right;
+    font-size: 1em;
+}
+
+.forum-creation-date-label, .forum-last-updated-label, .project-creation-date-label, .project-member-vacancies{
+    width: 52%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+    float: right;
+}
+
+hr{
+    border-top: 1px solid #c81d25;
+    width: 98%;
+}
+
+/*FIM DO FEED DE FORUMS*/
+
+/*PÁGINA PESSOAL DO USER*/
+
+.user-profile-page{
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 0.5%;
+    float: left;
+    border-radius: 8px;
+    padding-bottom: 1%;
+}
+
+.user-pic-and-name{
+    float: left;
+    width: 90%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+#profile-image-picture{
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 50%;
+    width: 20%;
+    float: left;
+}
+
+.user-full-name, .user-nickname, .user-workplace{
+    width: 75%;
+    float: left;
+    margin-bottom: 0;
+    margin-left: 2%;
+}
+.user-full-name{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.user-nickname{
+    margin-top: 0.5%;
+    font-size: 1.3em;
+}
+
+.user-workplace{
+    margin-top: 0;
+}
+
+.personal-profile-hr{
+    float: left;
+    margin-top: 1%;
+    width: 70%;
+    border-top: 1px solid #c81d25;
+    margin-left: 2%;
+}
+
+.edit-profile{
+    background-color: whitesmoke;
+    color: #b31c23;
+    border: none;
+    font-size: 1em;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.fa-gear, .fa-heart{
+    font-size: 3em;
+}
+
+.user-caracteristics{
+    width: 95%;
+    float: left;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.information-about-privacy{
+    float: left;
+    width: 22%;
+    font-size: 1.3em;
+    margin-left: 38%;
+    text-align: center;
+}
+
+.user-biography-label, .user-availability-label, .user-skill-list, .user-interest-list{
+    font-size: 1.5em;
+    color: #b31c23;
+    margin-bottom: 0;
+}
+
+.user-biography, #user-availability{
+    word-wrap: break-word;
+    text-align: justify;
+    color: #333;
+    font-size: 1em;
+}
+
+#user-availability{
+    margin-top: 0;
+}
+
+.user-skill-container, .user-interest-container{
+    float: left;
+    width: 99%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.user-skill, .user-interest{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    margin: 1px;
+    padding: 0.25%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 8px;
+    float: left;
+}
+
+/*FAVORITOS E REGISTADOS PELO USER*/
+
+.user-favorites, .user-envolved{
+    margin-top: 1%;
+    float: left;
+    background-color: #b31c23;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.user-favorites{
+    background-color: #E0AFA0;
+}
+
+.user-envolved{
+    margin-bottom: 10%;
+}
+
+.user-favorites-label, .user-envolved-label{
+    margin-bottom: 0.5%;
+    color: whitesmoke;
+}
+
+.user-favorites-buttons, .user-registered-buttons{
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.favorites-btn, .registered-btn{
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.favorites-btn:hover, .registered-btn:hover{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    transition: 0.4s all;
+}
+
+.user-envolved-label, .user-favorites-label{
+    font-size: 1.5em;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+/*FIM DOS FAVORITOS E REGISTADOS PELO USER*/
+
+/*FIM DA PÁGINA PESSOAL DO USER*/
+
+/*LISTA DE NOTIFICAÇÕES DO USER*/
+
+.notification-label{
+    font-size: 2em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    float: left;
+}
+
+.warning-no-notfications{
+    float: left;
+    width: 18%;
+    margin-left: 41%;
+    margin-top: 6%;
+    font-size: 1.3em;
+    color: #a21920;
+}
+
+#feedback-notifications{
+    margin-top: 2%;
+    margin-right: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.container-notifications{
+    width: 100%;
+    float: left;
+}
+
+.notification{
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 0.5%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.notification-text{
+    width: 89%;
+    padding: 0.5%;
+    word-wrap: break-word;
+    text-align: justify;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+}
+
+/*BOTÕES DA NOTIFICAÇÃO*/
+.notification-btn-container{
+    float: right;
+    width: 10%;
+    display: flex;
+    height: 100%;
+}
+
+.accept-notification, .reject-notification, .see-relevant-information{
+    border: none;
+    font-size: 1.6em;
+    background-color: whitesmoke;
+    width: 40%;
+    height: 80%;
+    margin-top: 15%;
+    cursor: pointer;
+}
+
+.not-icon{
+    width: fit-content;
+    justify-content: space-around;
+    text-align: center;
+    color: #666666;
+}
+
+.not-icon:hover/*, .fa-trash-can:hover*/{
+    color: #333;
+    transition: all 0.4s;
+}
+
+/*FIM DOS BOTÕES DA NOTIFICAÇÃO*/
+
+/*FIM DA LISTA DE NOTIFICAÇÕES DO USER*/
+
+/*MENSAGEMS DO USER*/
+
+/*BOTÕES GERAIS AO ECRÃ DE MENSAGENS*/
+.message-btn-container{
+    background-color: #a21920;
+    float: left;
+    width: 100%;
+    margin-top: 0.5%;
+    border-radius: 8px;
+}
+
+.message-btn{
+    float: left;
+    margin: 1%;
+    padding: 0.5%;
+    border-radius: 8px;
+    border: none;
+    background-color: whitesmoke;
+    color: #a21920;
+    font-size: 1.1em;
+    width: 32%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.selected-box-msg{
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.message-btn:hover{
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+#sent-btn{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.exchanged{
+    width: 48%;
+}
+
+/*FIM DOS BOTÕES GERAIS DAS MENSAGENS*/
+
+/*CAIXA DE ENTRADA*/
+
+.message-container{
+    float: left;
+    width: 100%;
+    margin-top: 0.5%;
+    /*margin-bottom: 10%;*/
+}
+
+.message{
+    width: 100%;
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 0.5%;
+    height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+/* .hover-message{
+    transform: scale(1.01);
+   transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+} */
+
+.message:hover , .message-between{
+    transform: scale(1.01);
+   /* transition: all 0.4s; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.stick{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+.message-user{
+    float: left;
+    width: 20%;
+    margin: 0.5%;
+    height: 80%;
+    /*overflow: hidden;*/
+}
+
+.message-date{
+    float: right;
+    margin: 1.25%;
+}
+
+#message-user-image{
+    float: left;
+    margin-top: 1%;
+    width: 17%;
+    border-radius: 50%;
+}
+
+.message-user-name{
+    float: left;
+    margin: 2.5%;
+    width: 78%;
+    margin-right: 0;
+    margin-top: 3.5%;
+}
+
+.message-content{
+    float: left;
+    width: 64%;
+    margin: 0.5%;
+    margin-top: 0.20%;
+    line-height: 3.3em;
+}
+
+#message-icon{
+    float: left;
+    width: 3%;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-size: 2.3em;
+}
+
+.opacity-message{
+    opacity: 50%;
+}
+
+/*FIM DA CAIXA DE ENTRADA*/
+
+/*MENSAGENS TROCADAS ENTRE 2 USERS*/
+
+.message-exchanged{
+    background-color: whitesmoke;
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+    border-color: #a21920;
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 0.5%;
+}
+
+.received{
+    border-radius: 8px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+}
+
+.message-exchanged-user{
+    margin: 0.5%;
+    float: left;
+    width: 99%;
+}
+
+#message-exchanged-user-image{
+    border-radius: 50%;
+    width: 5%;
+    float: left;
+}
+
+.message-exchanged-user-name{
+    float: left;
+    width: 77%;
+    margin: 1.5%;
+    font-weight: bold;
+}
+
+.send-date{
+    float: left;
+    width: 12%;
+    margin: 1.5%;
+}
+
+.message-exchanged-content{
+    background-color: white;
+    float: left;
+    margin: 0.5%;
+    border-radius: 8px;
+    padding: 1%;
+    width: 97%;
+}
+
+/*FIM DAS MENSAGENS TROCADAS ENTRE 2 USERS*/
+
+.message-sent{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.no-empty-fields{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+/*FIM DAS MENSAGENS DO USER*/
+
+/*VER FORUM E PROJETO*/
+
+.error-see-forum{
+    float: left;
+    width: 67%;
+    margin-top: 0.5%;
+    margin-left: 16.5%;
+    color: #a21920;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*PERGUNTAR SE TEM A CERTEZA DE QUERER TERMINAR O PROJETO OU ELIMINAR O PROJETO*/
+.project-question{
+    width: 60%;
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin: 1%;
+    margin-left: 20%;
+}
+
+.project-question-p{
+    font-size: 1.3em;
+    width: 94%;
+    float: left;
+    padding: 2%;
+    padding-left: 4%;
+    padding-bottom: 0;
+}
+
+.project-question-error{
+    margin-left: 4%;
+    font-size: 0.8em;
+    float: left;
+    width: 82%;
+    margin-top: -2%;
+}
+
+.project-question-button-div{
+    margin-left: 10%;
+    width: 80%;
+    float: left;
+    margin-bottom: 3%;
+}
+
+.div-question-button, .div-question-button-error{
+    width: 49.5%;
+    float: left;
+    margin: 0.25%;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.4s;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+}
+
+.div-question-button-error{
+    width: 99.5%;
+}
+
+.div-question-button:hover, .div-question-button-error:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+
+}
+
+/*FIM DAS QUESTÕES SOBRE SE TEM A CERTEZA*/
+
+.forum, .project{
+    width: 100%;
+    float: left;
+    background-color: whitesmoke;
+    margin-top: 0.5%;
+    border-radius: 8px;
+}
+
+.project{
+    margin-bottom: 5%;
+}
+
+.top-info{
+    float: left;
+    margin: 0.5%;
+    width: 99%;
+}
+
+.forum-owner, .project-owner{
+    margin: 0.5%;
+    float: left;
+    width: 78%;
+}
+
+#owner-image{
+    float: left;
+    border-radius: 50%;
+    width: 15%;
+    cursor: pointer;
+}
+
+.owner-name{
+    font-size: 1.3em;
+    font-weight: bold;
+    float: left;
+    width: 81%;
+    margin: 2%;
+    cursor: pointer;
+}
+
+#see-forum-info-user, #see-project-info-user{
+    float: left;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.project-status{
+    float: left;
+    width: 83%;
+    font-size: 1.1em;
+    margin-left: 2%;
+    color: #a21920;
+    font-weight: bold;
+}
+
+.has-forum{
+    float: left;
+    color: #a21920;
+    margin: 1%;
+    margin-left: 2%;
+}
+
+.option-forum, .option-project{
+    float: right;
+    width: 17%;
+    margin: 1%;
+    margin-top: 2%;
+    margin-right: 2%;
+    padding: 1%;
+    border-radius: 8px;
+    border: none;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#edit{
+    margin-top: 0;
+}
+
+.option-forum:hover, .option-project:hover{
+    background-color: #E0AFA0;
+    color: #a21920;
+    transition: all 0.4s;
+}
+
+.forum-content, .project-content{
+    margin: 0.5%;
+    width: 99%;
+    float: left;
+}
+
+.see-forum-title, .see-forum-description, .see-project-title, .see-project-description, .text-resources, .text-execution{
+    float: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0.5%;
+    width: 98%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    text-align: justify;
+}
+
+.see-forum-description, .see-project-description, .text-resources, .text-execution{
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.interested-users-label, .members-label, .title-resources, .title-execution, .associated-label-see-project, .associated-skills-label, .associated-interests-label, .associated-necessities-label, .associated-ideas-label, .see-forum-votes, .see-project-votes, .last-update-see-forum, .creation-see-project{
+    float: left;
+    width: 98.5%;
+    margin: 0.5%;
+    padding-left: 0.5%;
+    font-weight: bold;
+}
+
+.interrested-users, .member-list, .associated-skills, .associated-interests, .associated-necessities, .associated-ideas, .associated-div-see-project{
+    float: left;
+    width: 98%;
+    margin: 1%;
+    margin-top: 0;
+}
+
+.interrested-users, .member-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+.user-interested, .member{
+    float: left;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.forum-interested-image, #member-image{
+    float: left;
+    border-radius: 50%;
+    max-width: 45px;
+    max-height: 45px;
+    cursor: pointer;
+}
+
+.forum-interested-name, .member-name{
+    float: left;
+    margin: 4%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+/*.idea, .necessity,*/ .associated-forum{
+    width: 100%;
+    float: left;
+    margin-bottom: 0.5%;
+}
+
+.interest, .skill, .span-title, /*.necessity-title, .idea-title, */.associated-forum-title {
+    float: left;
+    background-color: #a21920;
+    color: white;
+    margin: 1px;
+    padding: 0.25%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.span-title-skill {
+    float: left;
+    background-color: #a21920;
+    color: white;
+    margin: 1px;
+    padding: 0.25%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 8px;
+}
+
+/*.necessity-title, .idea-title, */.associated-forum-title{
+    border-radius: 0;
+    background-color: whitesmoke;
+    border-right: 3px solid #E0AFA0;
+    color:#333;
+    width: 30%;
+    font-weight: bold;
+}
+
+/*.necesity-description, .idea-description*/.associated-forum-description {
+    width: 64%;
+    float: left;
+    margin: 1.25%;
+    margin-top: 0.25%;
+    text-align: justify;
+}
+
+/*BOTÕES NO FINAL DO VER FORUM/PROJECTO*/
+
+.forum-buttons, .project-buttons{
+    float: left;
+    width: 98%;
+    margin: 1%;
+    background-color: #a21920;
+    border-radius: 8px;
+}
+
+.forum-btn, .project-btn{
+    font-size: 1em;
+    font-weight: bold;
+    float: left;
+    width: 31%;
+    margin: 1%;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: whitesmoke;
+    color: #333;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.project-btn {
+    width: 48%;
+}
+
+.project-btn:hover,
+.forum-btn:hover{
+    color: whitesmoke;
+    background-color: #E0AFA0;
+    transition: all 0.4s;
+}
+
+#favorited-project,
+ #voted-project,
+#voted-forum,
+ #favorited-forum{
+    background-color: #E0AFA0;
+    color:whitesmoke;
+}
+
+#heartdBtn,
+#likedBtn{
+    color:#a21920; 
+}
+
+#favorited-project:hover,
+#voted-project:hover,
+#voted-forum:hover,
+#favorited-forum:hover{
+    color: #333;
+    background-color:whitesmoke;
+    transition: all 0.4s;
+    cursor:pointer;
+}    
+
+.animationHeart{
+        transform: scale(1.1);
+        color: #c81d25;
+        /* filter: drop-shadow(15px 15px 15px black); */
+}
+    
+
+#heartBtn, #heartdBtn{
+    font-size: 25px;
+}
+
+.like{
+    color:#333;
+}
+
+#icon-votes-seeProject{
+    padding-left: 0.3%;
+}
+
+/*FIM DOS BOTÕES NO FINAL NO VER FORUM*/
+
+/*COMENTÁRIOS AO FORUM*/
+
+/*expansível*/
+
+.comment-details{
+    float: left;
+    width: 100%;
+}
+
+#open-comment-section{
+    width: 98%;
+    float: left;
+    font-size: 1.3em;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+    background-color: whitesmoke;
+    color: #333;
+    border-radius: 8px; 
+    padding: 1%;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+/*fim do expansível*/
+
+.comment-section{
+    margin-top: 0.5%;
+    width: 100%;
+    float: left;
+}
+
+.comment-forum{
+    float: left;
+    width: 99.5%;
+    padding: 0.25%;
+    border-radius: 8px;
+    border-color: #E0AFA0;
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 0.5%;
+}
+
+.comment, .reply{
+    float: left;
+    width: 98%;
+    margin-bottom: 0.5%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    padding: 1%;
+}
+
+.reply{
+    margin-bottom: 2%;
+}
+
+.user-commentor{
+    float: left;
+    width: 100%;
+}
+
+#forum-commentor-image{
+    float: left;
+    border-radius: 50%;
+    width: 5%;
+    cursor: pointer;
+}
+
+.forum-commentor-name{
+    float: left;
+    margin: 1.25%;
+    width: 80%;
+    cursor: pointer;
+}
+
+.comment-options{
+    float: right;
+    width: 12%;
+    margin-top: 1%;
+}
+
+/*.reply-btn, .edit-comment-btn, .delete-comment-btn{
+    font-size: 1.3em;
+    float: right;
+    padding: 0.5%;
+    margin: 0.5%;
+    margin-right: 1.5%;
+    border: none;
+    background-color: whitesmoke;
+    cursor: pointer;
+}*/
+
+.edit-comment-btn, .delete-comment-btn, .reply-comment-btn{
+    width: 33%;
+    float: right;
+    cursor: pointer;
+}
+
+.btns-comment{
+    font-size: 2em;
+    color: #333;
+    margin-left: 23%;
+    transition: all 0.4s;
+}
+
+.btns-comment_hover{
+    transition: all 0.4s;
+    color: #a21920;
+}
+
+.comment-content{
+    float: left;
+    background-color: white;
+    width: 98%;
+    padding: 1%;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.see-replies-to-comment{
+    float: right;
+    margin-right: 0.5%;
+    cursor: pointer;
+    color: #a21920;
+    font-weight: bold;
+}
+
+.see-replies-to-comment:hover{
+    text-decoration: underline;
+}
+
+.comment-date{
+    float: left;
+    margin-left: 0.5%;
+    font-size: 0.9em;
+}
+
+.replies-to-comment{
+    margin-left: 1%;
+    float: left;
+    width: 96%;
+    margin-top: 0.5%;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+/*CAIXA PARA ADICIONAR COMENTÁRIO*/
+
+.add-comment, .add-reply{
+    float: left;
+    width: 100%;
+    margin-bottom: 5%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+.add-reply{
+    /* margin-top: -2%; */
+    margin-bottom: 0.25%;
+}
+
+.case-reply{
+    width: 98%;
+    float: left;
+    margin: 1%;
+    margin-bottom: 0;
+}
+
+.span-reply{
+    float: left;
+    margin-left: 0.5%;
+}
+
+.reply-to{
+    float: left;
+    width: 96%;
+    padding-left: 1%;
+}
+
+.write-reply{
+    font-size: 1.1em;
+    font-family: sans-serif;
+    padding: 1%;
+    float: left;
+    width: 96%;
+    margin: 1%;
+    border-radius: 8px;
+    border:0;
+    resize: none;
+}
+
+.send-comment{
+    font-size: 1.2em;
+    border: none;
+    padding: 0.5%;
+    background-color: #a21920;
+    color: whitesmoke;
+    border-radius: 8px;
+    width: 20%;
+    margin: 0.5%;
+    margin-left: 40%;
+    transition: all 0.4s;
+}
+
+.save-comment-alterations{
+    margin-left: 29%;
+    font-size: 1.1em;
+}
+
+.send-comment:hover{
+    background-color: #E0AFA0;
+    color: #333;
+    transition: all 0.4s;
+}
+
+/*FIM DA CAIXA PARA ADICIONAR COMENTÁRIO*/
+
+/*FIM DOS COMENTÁRIOS AO FÓRUM*/
+
+/*FIM VER FORUM*/
+
+/*CRIAR FORUM*/
+
+.container-title{
+    width: 100%;
+    float: left;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 2.5%;
+    margin-bottom: 0.5%;
+}
+
+.new-forum-container, .forum-associations, .new-project-container{
+    background-color: whitesmoke;
+    margin-top: 0.5%;
+    border-radius: 8px;
+    float: left;
+    width: 100%;
+}
+
+.new-forum-title, .new-project-title{
+    font-size: 1.2em;
+    float: left;
+    width: 97.5%;
+    margin: 0.5%;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5%;
+    padding-left: 1%;
+}
+
+/* QUILL*/
+.container-general-quill {
+    float: left;
+    margin: 0.5%;
+    width: 95.5%;
+    /*position: absolute;
+    top:30%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);*/ 
+    border: 1px solid whitesmoke;
+    background-color: white;
+    border-radius: 8px;
+    border-top: 0px;
+    padding:20px;
+    
+}
+
+/*FIM QUILL*/
+
+/*ASSOCIAÇÕES COM FORUM*/
+
+.forum-associations, .user-associations{
+    background-color: white;
+    float: left;
+    width: 100%;
+}
+
+.association-skill, .association-interest, .association-idea, .association-necessity, .association-member{
+    background-color: whitesmoke;
+    margin: 0.5%;
+    margin-left: 0;
+    border-radius: 8px;
+    float: left;
+    width: 100%;
+}
+
+.association-title{
+    font-size: 1.2em;
+    margin:0.5%;
+    padding-left: 0.5%;
+    width: 98%;
+    float: left;
+}
+
+.associated-list{
+    margin: 0.5%;
+    background-color: white;
+    width: 99%;
+    float: left;
+    height: 50px;
+    border-radius: 8px;
+    display: none;
+}
+
+.input-box-add-forum, .input-box-add-project{
+    margin: 0.5%;
+    width: 97%;
+    float: left;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5%;
+    font-size: 1.2em;
+    padding-left: 1%;
+  
+}
+
+#association-text-idea, #association-text-necessity, .textarea-new-project{
+    margin: 0.5%;
+    width: 98%;
+    float: left;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    font-family: sans-serif;
+    padding: 0.5%;
+}
+
+.textarea-new-project{
+    font-size: 1.2em;
+    width: 97%;
+    margin-left: 1%;
+}
+
+.button-associate{
+    margin: 0.5%;
+    width: 20%;
+    float: right;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5%;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.button-associate:hover{
+    background-color: #E0AFA0;
+    color: #333;
+    transition: all 0.4s;
+}
+
+.question-skill,
+.question-interest{
+    float: left;
+    margin: 0.5%;
+    font-size: 0.9em;
+    padding-left: 0.5%;
+}
+
+.question-click,.question-click-int, .question-click-skill{
+    color: #a21920;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.question-click:hover, .question-click-int:hover, .question-click-skill:hover {
+    text-decoration: underline;
+}
+
+.create-new-skill, 
+.create-new-interests, 
+.edit-association-necessity,
+.edit-association-idea,
+.box-search-ideas,
+.box-search-necessities{
+    width: 100%;
+    float: left;
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+}
+
+.empty-skill, .error-skill, .error-interest, .error-basic-info, .error-idea-or-necessity, .error-title-missing, .error-description-missing, .error-changing{
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #a21920;
+}
+
+
+
+.error-title-missing{
+    margin-top: 0.5%;
+}
+
+.button-associate-necessity,
+.button-associate-idea ,
+.box-search-skills, 
+.box-search-interest,
+.box-search-workplace,
+.title-group,
+.title-one-by-one,
+.box-search-user{
+    width: 100%;
+    float: left;
+    animation-name: fadeInDown;
+    animation-duration: 0.9s;
+}
+
+.input-box-add{
+    margin: 0.5%;
+    width: 97%;
+    float: left;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5%;
+    font-size: 1.2em;
+    padding-left: 1%;
+ 
+}
+
+/* SELECT BOX */
+  
+  .select-box {
+    float: left;
+    margin: 0.5%;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    font-size: 1.1em;
+  }
+  
+  .select-box .options-container {
+    background: white;
+    color: #333;
+    max-height: 0; /*começa a 0 mas pode chegar a determinado tamanho*/
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px; /*arredonda*/
+    overflow: hidden;/*para que tudo o que esteja fora deste container não seja mostrado*/
+  
+    order: 1;
+  }
+  
+  .selected { /*caixa onde fica a opção selecionada ou que diz selecione a categoria*/
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #333;
+    position: relative;
+  
+    order: 0; /*caixa onde fica a opção selecionada pelo utilizador e que com isto fica por cima da caixa das opções + caixa ficar com posição 1*/
+  }
+  
+  .select-box .options-container.active {/*se o elemento tiver ambas as classes ativas ele vai ativar o que está dentro destas {}*/
+    max-height: 70px;
+    opacity: 1;
+    overflow-y: scroll; /*permite a possibilidade de criar o scroll*/
+  }
+  
+  .select-box .options-container.active + .selected::after { /*quando temos estes options container e active estamos a fazer mudanças no selected after*/
+    transform: rotateX(180deg);
+    top: -6px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar { /*para criar o scroll customizado (arredondado e de cor escura/) dentro da combo box*/
+    width: 8px;
+    background: whitesmoke;
+    border-radius: 0 8px 8px 0; /*arredondar as pontas do lado direito*/
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb { /*para criar o cursos que sobre e desce com o scroll, que também fica arredondado e tem uma cor cinzenta escura*/
+    background: #a21920;
+    border-radius: 0 8px 8px 0;/*arredondar as pontas do lado direito*/
+  }
+  
+  .select-box .option,
+  .selected {
+    padding: 0.5%; /*espaçamento entre os itens e o tem e a borda*/
+    cursor: pointer;
+  }
+  
+  .select-box .option:hover { /*rato por cima das várias opções muda de cor*/
+    background: #E0AFA0;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio { /*esconder o aspeto dos radio buttons, para parecer uma lista normal*/
+    display: none;
+  }
+
+/* FIM SELECT BOX */
+
+/*FIM DAS ASSOCIAÇÕES*/
+
+.create-new-forum, .create-new-project, .edit-forum {
+    margin: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    width: 99%;
+    border: none;
+    border-radius: 8px;
+    padding: 1.5%;
+    background-color: #E0AFA0;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.create-new-forum:hover, .create-new-project:hover, .edit-forum:hover{
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+.already-have-project, .finished-project-info, .finished-forum-info{
+    float: left;
+    font-size: 1.5em;
+    margin-top: 10%;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.finished-project-info{
+    width: 30%;
+    margin-left: 35%;
+}
+
+.finished-forum-info{
+    width: 34%;
+    margin-left: 33%;
+}
+
+.go-to-my-project{
+    float: left;
+    width: 35%;
+    font-size: 1.3em;
+    padding: 1%;
+    background-color: #a21920;
+    border: none;
+    border-radius: 8px;
+    color: whitesmoke;
+    margin-left: 31.5%;
+    cursor: pointer;
+}
+
+.error-going-to-project{
+    float: left;
+    width: 12%;
+    font-size: 1.2em;
+    margin-left: 43%;
+    margin-top: 6%;
+    margin-bottom: 0.5%;
+}
+
+/* 
+.color-black{
+    background-color: #333;
+}
+
+.color-white:hover{
+    color: whitesmoke;
+} */
+
+.no-empty-fields-edit{
+    color:  #a21920;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.no-empty-fields-skill,
+.no-empty-fields-interest{
+    color:  #a21920;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    /* indent:20px; */
+}
+
+
+/*FIM CRIAR FORUM*/
+
+/*EDITAR PERFIL*/
+
+.edit-profile-h4{
+    font-size: 2em;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    float: left;
+    width: 100%;
+}
+
+.edit-profile-container{
+    float: left;
+    background-color: whitesmoke;
+    width: 100%;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    border-radius: 8px;
+}
+
+.basic-info{
+    width: 99%;
+    float: left;
+    margin: 0.5%;
+}
+
+.basic-info-full-name{
+    width: 49%;
+    float: left;
+    margin: 0.5%;
+}
+
+.basic-info-second{
+    width: 49%;
+    float: right;
+    margin: 0.5%;
+    
+}
+
+.input-basic-info{
+    width: 96%;
+    font-size: 1.1em;
+    margin: 0.5%;
+    padding: 1%;
+    border: none;
+    border-radius: 8px;
+  
+}
+
+.label-user-infor{
+    float: left;
+    width: 99%;
+    font-size: 1em;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.profile-hr{
+    width: 86%;
+    float: left;
+    margin-left: 7%;
+    margin-top: 0;
+}
+
+.profile-pic{
+    width: 99%;
+    float: left;
+    margin: 0.5%;
+}
+
+.profile-pic-checker{
+    float: left;
+    border-radius: 50%;
+    width: 15%;
+    margin-left: 1%;
+}
+
+#edit-user-profile-picture{
+    width: 79%;
+    margin: 1%;
+    margin-bottom: 0.5%;
+    margin-left: 2%;
+    float: left;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+    font-size: 1.5em;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+.edit-profile-picture-options{
+    background-color: #E0AFA0;
+    width: 79%;
+    float: left;
+    margin-left: 2%;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+.picture-option-label{
+    font-size: 1.2em;
+    width: 99%;
+    margin: 0.5%;
+    color: whitesmoke;
+}
+
+.input-picture{
+    padding: 1%;
+    font-size: 1.1em;
+    width: 98%;
+    border: none;
+    border-radius: 8px;
+  
+}
+
+#link-profile-pic{
+    width: 80%;
+    margin-bottom: 1.5em;
+    float: left;
+}
+
+.end-link-profile{
+    float: left;
+    font-size: 1.2em;
+    padding: 1%;
+    padding-left: 1.75%;
+    padding-right: 1.75%;
+    margin-left: 2%;
+    border: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #a21920;
+    transition: all 0.4s;
+}
+
+.end-link-profile:hover {
+    transition: all 0.4s;
+    background-color: #a21920;
+    color: whitesmoke;
+}
+
+.titan-container{
+    width: 100%;
+    float: left;
+}
+
+.no-photo{
+    float: left;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 9%;
+    padding: 1%;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #a21920;
+    transition: all 0.4s;
+}
+
+.no-photo:hover{
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+.profile-avatar{
+    width: 8%;
+    max-height: 10%;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 3.5%;
+  
+}
+
+.more-user-info-profile{
+    width: 97%;
+    float: left;
+    margin: 1.5%;
+}
+
+.input-non-obligatory{
+    padding: 1%;
+    font-size: 1.1em;
+    width: 98%;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    font-family: sans-serif;
+    margin-top: 0.5%;
+ 
+}
+
+.extra-btns{
+    width: 100%;
+    margin-top: 0;
+    background-color: #333;
+    float: left;
+    border-radius: 8px;
+}
+
+.extra-btn-profile{
+    width: 48%;
+    padding: 0.90%;
+    margin: 0.90%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: whitesmoke;
+    color: #a21920;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.extra-btn-profile:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+}
+
+.save-profile{
+    background-color: #a21920;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.2em;
+    float: left;
+    width: 33%;
+    padding: 1%;
+    margin-left: 32%;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.save-profile:hover{
+    background-color: #E0AFA0;
+    transition: all 0.4s;
+}
+
+/*FIM DO EDITAR PERFIL*/
+
+/*PAGINA ABOUT*/
+.title{
+    color: #b31c23;;
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+    margin-top: 4%;
+    margin-left: 2%;
+    width: fit-content;
+    margin-bottom: 1%;
+  }
+
+  .titan-about{
+    width: 25%;
+    float: right;
+  }
+
+
+  .card-about{
+    width: 100%;
+    float: left;
+    margin-top: 0.5%;
+    /*box-shadow: 0px 8px 8px 0px rgba(144, 144, 144, 0.2);*/
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.content-about{
+    margin-left: 3%;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 85%;
+    margin-bottom: 0;
+    text-align:justify;
+}
+
+/*FIM PAGINA ABOUT*/
+  
+/*PAGINA GENERAL ERROR*/
+ .title-error{
+    color: whitesmoke;
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-top: -2%;
+    margin-left: 34%;
+    width: 34%;
+    text-align:center;
+  } 
+
+  .enter{
+    text-align: center;
+    cursor: pointer;
+    background-color: #a21920;
+    color: whitesmoke;
+    padding: 0.5%;
+    margin-top: 0.5%;
+    border-radius: 8px;
+    float: right;
+    margin-right: 6.5%;
+    width: 9%;
+    transition: all 0.4s;
+  }
+
+  .enter:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+  }
+
+  /*.type-error{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-left: 13%;
+    width: fit-content;
+    margin-bottom: 1%;
+    text-align:center;
+  }*/
+
+  .card-about-image{
+    text-align:center;
+  }
+
+  .card-error{
+    width: 100%;
+    float: left;
+    margin-top: 2%;
+    background-image: url("./titans/background-error.png");
+    min-height: 100%;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.titan-error{
+    filter: drop-shadow(15px 15px 15px black);
+}
+/*FIM PAGINA GENERAL ERROR*/
+
+/*PÁGINA DE FAVORITOS*/
+
+.title-favorites{
+    width: 100%;
+    float: left;
+    font-size: 2em;
+    margin-top: 1.5%;
+    margin-bottom: 0;
+}
+
+.favorites-title{
+    width: 98%;
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 1.2em;
+    background-color: #E0AFA0;
+    padding: 1%;
+    border-radius: 8px;
+    color: whitesmoke;
+}
+
+.filter-favorites-category{
+    float: left;
+    background-color: #E0AFA0;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.filter-category, .sort-favorites{
+    width: 99%;
+    float: left;
+    margin: 0.5%;
+}
+
+.filter-favorites-h6{
+    width: 99%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    font-size: 1.1em;
+    padding-left: 1%;
+    color: whitesmoke;
+}
+
+.category-btns{
+    float: left;
+    width: 99%;
+    margin-left: 1%;
+}
+
+.button-category-type, .button-favorites-order-by{
+    float: left;
+    width: 32.5%;
+    margin: 0.25%;
+    padding: 1%;
+    font-size: 1.05em;
+    background-color: whitesmoke;
+    color: #333;
+    margin-bottom: 0.5%;
+    border: none;
+    transition: all 0.4s;
+    border-radius: 8px;
+}
+
+.button-category-type:hover, .button-favorites-order-by:hover{
+    transition: all 0.4s;
+    background-color: #a21920;
+    color: whitesmoke;
+}
+
+.clicked{
+    background-color: #333;
+    color: whitesmoke;
+}
+
+#apply-filter-favorites, #clear-filter-favorites{
+    float: left;
+    width: 48%;
+    margin: 0.5%;
+    padding: 0.5%;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 1%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+#apply-filter-favorites:hover, #clear-filter-favorites:hover{
+    transition: all 0.4s;
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.favorites-container{
+    width: 100%;
+    float: left;
+    height: 500px;
+}
+
+/*FIM DA PÁGINA DE FAVORITOS*/
+
+/*NOVA MENSAGEM*/
+
+.go-back-btn, .finished-btn, .member-btn{
+    background-color: #a21920;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    font-size: 1.2em;
+    width: 15%;
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+ .softDelete-btn{
+    background-color: #a21920;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    font-size: 1.2em;
+    width: 15%;
+    float: left;
+    margin-top: 0.8%;
+    /* margin-bottom: 1%; */
+    transition: all 0.4s;
+    cursor: pointer;
+    float:right;
+    font-size: 1em;
+}
+
+#edit-forum-button-div{
+    margin-bottom: 0;
+}
+
+.go-back-btn:hover{
+    background-color: #E0AFA0;
+    transition: all 0.4s;
+}
+
+.new-message-container{
+    width: 100%;
+    float: left;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.new-message-label{
+    float: left;
+    width: 98%;
+    color: whitesmoke;
+    font-size: 1.15em;
+    padding-left: 2%;
+    margin-bottom: 0;
+}
+
+.new-messages-input{
+    background-color: whitesmoke;
+    width: 98%;
+    float: left;
+    margin: 1%;
+    border-radius: 8px;
+  
+}
+
+.message-input{
+    width: 98%;
+    margin: 0.5%;
+    padding: 0.5%;
+    border: none;
+    border-radius: 8px;
+    float: left;
+    resize: none;
+    font-size: 1.1em;
+    font-family: sans-serif;
+  
+}
+
+.send-btn{
+    width: 20%;
+    padding: 1%;
+    margin-left: 38%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.send-btn:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+}
+
+/* FIM DA PÁGINA DA NOVA MENSAGEM */
+
+/*ERROS*/
+
+.error-text{
+    padding-left: 2%;
+    margin: 0;
+  }
+
+.error-text, .sucess-text{
+    color:#c81d25;
+    font-weight: bold;
+}
+
+
+
+.cannot-delete-message{
+    color:#c81d25;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-left: 20%;
+    font-size: 1.2em;
+}
+
+/* FIM DOS ERROS */
+
+/* PÁGINA DE REGISTADOS PELO UTILIZADOR */
+
+.user-registered-h4{
+    width: 100%;
+    float: left;
+    font-size: 2em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+/* FILTRO */
+
+.registered-title{
+    float: left;
+    width: 98%;
+    background-color: #e7e3e3;
+    font-size: 1.3em;
+    padding: 1%;
+    border-radius: 8px;
+    margin-top: 0.5%;
+}
+
+.filter-user-registered{
+    float: left;
+    width: 98%;
+    padding: 1%;
+    background-color: #e7e3e3;
+    margin-top: 0.5%;
+    border-radius: 8px;
+}
+
+.filter-skill-user-registered, .filter-interest-user-registered{
+    float: left;
+    width: 49%;
+    margin: 0.5%;
+}
+
+.registered-filter-skill-container, .registered-filter-interest-container{
+    float: left;
+    height: 50px;
+    width: 96%;
+    margin: 2%;
+}
+
+.sort-registered{
+    width: 98%;
+    margin: 1%;
+    float: left;
+}
+
+.order-btns{
+    width: 100%;
+    float: left;
+
+}
+
+.button-registered-order-by{
+    width: 48%;
+    float: left;
+    padding: 1%;
+    margin: 1%;
+    border: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #333;
+    transition: all 0.4s;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.button-registered-order-by:hover{
+    background-color: #333;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor:pointer;
+}
+
+#apply-filter-registered, #clear-filter-registered{
+    width: 49%;
+    float: left;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 1%;
+    border: none;
+    border-radius: 8px;
+    margin-left: 0.65%;
+}
+
+#apply-filter-registered:hover, 
+#clear-filter-registered:hover{
+    transition: all 0.4s;
+    background-color: whitesmoke;
+    color: #a21920;
+    cursor:pointer;
+}
+
+/* FIM FILTRO */
+
+/* FIM DA PÁGINA DE REGISTADOS PELO UTILIZADOR */
+
+/*LOADING*/
+  
+  /* spinner */
+  .spinner {
+    margin-top: 1%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left: 5%;
+  }
+  
+  .spinner div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    border-top-color: red;
+    animation: spinnerOne 1.2s linear infinite;
+  }
+  
+  .spinner div:nth-child(2) {
+    border: 10px solid transparent;
+    border-bottom-color: red;
+     animation: spinnerTwo 1.2s linear infinite;
+  }
+  
+  @keyframes spinnerOne {
+    0%{ transform: rotate(0deg); 
+        border-width: 10px;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-width: 1px;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-width: 10px;
+    }
+    
+  }
+  
+  @keyframes spinnerTwo {
+    0%{ transform: rotate(0deg); 
+        border-width: 1px;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-width: 10px;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-width: 1px;
+    }
+  }
+
+/* FIM DO LOADING */
+
+/*ECRA PRIVACIDADE E SEGURANÇA*/
+
+.title-privacy, .title-security{
+    float: left;
+    width: 98%;
+    padding: 1%;
+    font-size: 1.3em;
+    background-color: whitesmoke;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 1%;
+}
+
+.privacy-section, .security-section{
+    background-color: whitesmoke;
+    float: left;
+    width: 98%;
+    padding: 1%;
+    margin-top: 0.25%;
+    border-radius: 8px;
+}
+
+.privacy-question, .add-users-title, .security-question{
+    padding-left: 1%;
+    font-size: 1.1em;
+    float: left;
+    width: 50%;
+}
+
+.security-question{
+    width: 49%;
+}
+
+.case-specific{
+    float: left;
+    width: 100%;
+}
+
+.see-users-in-list{
+    font-size: 1em;
+    color: #a21920;
+    cursor: pointer;
+}
+
+.see-users-in-list:hover{
+    text-decoration: underline;
+}
+
+.buttons-manage-privacy{
+    background-color: #E0AFA0;
+    margin-bottom: 0.5%;
+    border-radius: 8px;
+}
+
+.button-privacy{
+    margin: 1%;
+    font-size: 1.2em;
+    padding: 0.5%;
+    padding-left: 4.15%;
+    padding-right: 4.15%;
+    background-color: whitesmoke;
+    color: #a21920;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#buttons-manage-privacy-div{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.button-privacy:hover{
+    transition: all 0.4s;
+    background-color: #a21920;
+    color: whitesmoke;
+}
+
+.search-group-div{
+    width: 100%;
+    float: left;
+}
+
+.title-one-by-one, .title-group{
+    font-size: 1.2em;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    float: left;
+    width: 86%;
+}
+
+.no-result-users, .no-result-workplace, .no-result-skills-privacy, .no-result-interests-privacy{
+    float: left;
+    width: 100%;
+}
+
+#div-skills, #div-interests{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    margin-bottom: 0.5%;
+}
+
+.box-search-user, .box-search-workplace, .box-search-skills-privacy, .box-search-interests-privacy{
+    float: left;
+    width: 85%;
+}
+
+.box-search-workplace, .box-search-skills-privacy, .box-search-interests-privacy{
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+#div-skills-privacy,
+#div-interests-privacy {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 0.5%;
+    width: 100%;
+}
+
+#results-interests-privacy,
+#results-skills-privacy{
+    width: 100%;
+    margin-left: -1%;
+}
+
+#ul-interests-privacy{
+    margin-top: 0.5%;
+}
+
+.input-name-or-nickname-one, .input-search, .input-name-or-nickname-one-admin{
+    width: 98%;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    float: left;
+ 
+}
+
+#search-name-or-nickname{
+    border: #666666 1px solid;
+}
+
+.results-user, .results-workplace, .results-skills-privacy, .results-interests-privacy{
+    float: left;
+    width: 100%;
+}
+
+.search-user, .add-group{
+    font-size: 1.1em;
+    padding: 1%;
+    float: left;
+    margin-left: 1%;
+    width: 14%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.add-group{
+    width: 30%;
+    margin-top: 1%;
+    margin-left: 35%;
+}
+
+.search-user:hover, .add-group:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+}
+/* SELECT BOX */
+
+.select-box-privacy {
+    float: left;
+    margin: 0.5%;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    font-size: 1.1em;
+    margin-top: 1%;
+  }
+  
+  .select-box-privacy .options-container-privacy {
+    background: white;
+    color: #333;
+    max-height: 0; /*começa a 0 mas pode chegar a determinado tamanho*/
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px; /*arredonda*/
+    overflow: hidden;/*para que tudo o que esteja fora deste container não seja mostrado*/
+  
+    order: 1;
+  }
+  
+  .selected-privacy { /*caixa onde fica a opção selecionada ou que diz selecione a categoria*/
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #333;
+    position: relative;
+  
+    order: 0; /*caixa onde fica a opção selecionada pelo utilizador e que com isto fica por cima da caixa das opções + caixa ficar com posição 1*/
+  }
+  
+  .select-box-privacy .options-container-privacy.active {/*se o elemento tiver ambas as classes ativas ele vai ativar o que está dentro destas {}*/
+    max-height: 70px;
+    opacity: 1;
+    overflow-y: scroll; /*permite a possibilidade de criar o scroll*/
+  }
+  
+  .select-box-privacy .options-container-privacy.active + .selected-privacy::after { /*quando temos estes options container e active estamos a fazer mudanças no selected after*/
+    transform: rotateX(180deg);
+    top: -6px;
+  }
+  
+  .select-box-privacy .options-container-privacy::-webkit-scrollbar { /*para criar o scroll customizado (arredondado e de cor escura/) dentro da combo box*/
+    width: 8px;
+    background: whitesmoke;
+    border-radius: 0 8px 8px 0; /*arredondar as pontas do lado direito*/
+  }
+  
+  .select-box-privacy .options-container-privacy::-webkit-scrollbar-thumb { /*para criar o cursos que sobre e desce com o scroll, que também fica arredondado e tem uma cor cinzenta escura*/
+    background: #a21920;
+    border-radius: 0 8px 8px 0;/*arredondar as pontas do lado direito*/
+  }
+  
+  .select-box-privacy .option-privacy,
+  .selected-privacy {
+    padding: 0.5%; /*espaçamento entre os itens e o tem e a borda*/
+    cursor: pointer;
+  }
+  
+  .select-box-privacy .option-privacy:hover { /*rato por cima das várias opções muda de cor*/
+    background: #E0AFA0;
+  }
+  
+  .select-box-privacy label {
+    cursor: pointer;
+  }
+  
+  .select-box-privacy .option-privacy .radio { /*esconder o aspeto dos radio buttons, para parecer uma lista normal*/
+    display: none;
+  }
+
+/* FIM SELECT BOX */
+
+.change-password{
+    font-size: 1.1em;
+    padding: 0.5%;
+    border-radius: 8px;
+    border: none;
+    width: 44%;
+    margin: 0.25%;
+    margin-right: 4%;
+    float: right;
+}
+
+#changed-password{
+    width: 18%;
+    margin-left: 41%;
+}
+
+.save-changes{
+    float: left;
+    width: 35%;
+    background-color: #a21920;
+    color: whitesmoke;
+    font-size: 1.2em;
+    padding: 1%;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 0.5%;
+    margin-left: 32.5%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.save-changes:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+}
+
+/* FIM ECRA PRIVACIDADE E SEGURANÇA*/
+
+/* LISTA DE USERS COM AUTORIZAÇÃO PARA VER O MEU PERFIL CASO TENHA A VISIBILIDADE ESPECÍFICA */
+
+.specific-list-title{
+    font-size: 2em;
+    float: left;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.title-delete-by-workplace{
+    background-color: #e7e3e3;
+    color: #333;
+    width: 98%;
+    float: left;
+    margin-top: 0.5%;
+    padding: 1%;
+    font-size: 1.3em;
+    border-radius: 8px;
+}
+
+.users-list{
+    margin-top: 1.5%;
+    float: left;
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+    minmax(auto, auto)
+    minmax(auto, auto)
+}
+
+.users-container{
+    float:left;
+    margin-top: 0.5%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+
+.user-specific{
+    width: 99%;
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 1.5%;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
+}
+
+.delete-group-div{
+    background-color: #e7e3e3;
+    color:#333;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.title-delete-group{
+    font-size: 1.2em;
+    color:#333;
+    width: 99%;
+    margin: 1%;
+    margin-right: 0;
+}
+
+.delete-no-result-workplace{
+    float: left;
+    width: 98%;
+    /* margin-left: 1%; */
+    margin-top: -1.5%;
+}
+
+.box-search-workplace-delete{
+    width: 70%;
+    float: left;
+    margin: 1%;
+    margin-top: 0;
+}
+
+.delete-by-workplace, .delete-everything, .clear-search{
+    float: left;
+    font-size: 1.1em;
+    padding: 0.75%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 27%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor:pointer;
+}
+
+.delete-everything{
+    width: 98%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.clear-search{
+    width: 100%;
+    margin-top: 0.5%;
+    /* margin-left: 1%; */
+}
+
+.delete-by-workplace:hover, 
+.delete-everything:hover,
+.clear-search:hover{
+    transition: all 0.4s;
+    background-color: #333;
+}
+
+.user-specific:hover{
+    transform: scale(1.01);
+    transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+#specific-user-image{
+    width: 10%;
+    border-radius: 50%;
+    margin: 0.5%;
+    float: left;
+}
+
+.specific-user-name{
+    float: left;
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.reject-btn-container{
+    float: right;
+    width: 7%;
+}
+
+.delete-user{
+    border: none;
+    background-color: whitesmoke;
+    margin-top: 34%;
+    float: right;
+    margin-right: 15%;
+}
+
+.delete{
+    font-size: 3em;
+    color: #666666;
+}
+
+.warning-empty-input{
+    font-size: 1.1em;
+    float: left;
+    color: #a21920;
+    margin-top: -0.8%;
+    font-weight: bold;
+    width: 42%;
+}
+
+.error-text{
+    padding-left: 2%;
+  }
+
+.error-text, .sucess-text{
+    color:#c81d25;
+    font-weight: bold;
+}
+
+.error-warning{
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+.li-workplace{
+    padding-left: 1%;
+}
+
+/* FIM DA LISTA DE USERS */
+
+/*GERIR MEMBROS DO PROJETO*/
+
+.manage-members-h4{
+    font-size: 2em;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    width: 100%;
+    float: left;
+}
+
+.finished-project, .edit-forum-button-div{
+    width: 99%;
+    float: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-right: 1%;
+}
+
+.finished-btn{
+    float:right;
+    font-size: 1em;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+#go-back-to-edit{
+    float: left;
+}
+
+#go-back-to-members{
+    float: left;
+    margin-top: 0.5%;
+}
+
+.member-btns{
+    float: left;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 0.5%;
+}
+
+.member-btn{
+    width: 23%;
+    margin: 1%;
+}
+
+.finished-btn:hover, .member-btn:hover , .softDelete-btn:hover {
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+}
+
+.search-user-to-invite{
+    width: 100%;
+    float: left;
+    background-color: #E0AFA0;
+    border-radius: 8px;
+    margin-bottom: 0.5%;
+}
+
+.box-search-member{
+    width: 100%;
+    float: left;
+    margin-bottom: 1%;
+}
+
+#input-member{
+    width: 65%;
+  
+}
+
+.show .results-member{
+    float: left;
+    width: 67%;
+    padding-top: 0.15%;
+}
+
+.manage-project-members-btn{
+    float: left;
+    width: 15%;
+    font-size: 1.1em;
+    padding: 0.5%;
+    margin-top: 1%;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s;
+    background-color: whitesmoke;
+    color: #a21920;
+    cursor: pointer;
+}
+
+.manage-project-members-btn:hover{
+    transition: all 0.4s;
+    background-color: #a21920;
+    color: whitesmoke;
+}
+
+#select-user-to-invite{
+    margin-left: 0.5%;
+}
+
+.li-member{
+    background-color: white;
+}
+
+.li-member:hover{
+    background-color: whitesmoke;
+}
+
+.invite-user-title{
+    font-size: 1.2em;
+    float: left;
+    width: 99%;
+    padding-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    color: whitesmoke;
+}
+
+.members-div{
+    background-color: whitesmoke;
+    width: 100%;
+    float: left;
+    border-radius: 8px;
+    margin-bottom: 5%;
+}
+
+.alterations-feedback, .action-feedback{
+    font-size: 1em;
+    float: right;
+    color: #c81d25;
+    margin-top: 0.5%;
+    margin-right: 2%;
+    font-weight: bold;
+}
+
+.action-feedback{
+    margin-right: 1%;
+    margin-top: 0;
+    margin-bottom: 0.5%;
+}
+
+.manage-members-ul{
+    float: left;
+    width: 96%;
+    padding-left: 2%;
+    margin-top: 0.5%;
+    margin-bottom: 3%;
+}
+
+.manage-user-li{
+    background-color: white;
+    width: 100%;
+    float: left;
+    list-style-type: none;
+    border-radius: 8px;
+    margin-bottom: 0.5%;
+}
+
+.manage-user-li:hover {
+    transform: scale(1.01);
+    transition: all 0.4s;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+ }
+
+.member-info{
+    float: left;
+    width: 65%;
+    padding: 0.5%;
+}
+
+.member-image{
+    float: left;
+    width: 5%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.member-name{
+    float: left;
+    font-size: 1em;
+    margin-top: 1.25%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.manage-user-btn-container{
+    float: right;
+    margin: 0.5%;
+    width: 33%;
+    margin-top: 0.75%;
+}
+
+.button-member, .button-delete{
+    float: left;
+    width: 78%;
+    font-size: 1.1em;
+    margin: 0.5%;
+    padding: 1.5%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.button-delete{
+    width: 19%;
+    padding: 1%;
+    float: right;
+}
+
+.button-member:hover, .button-delete:hover{
+    background-color: #E0AFA0;
+    transition: all 0.4s;
+}
+
+.member-icon{
+    color: whitesmoke;
+}
+
+.member-icon:hover{
+    color: whitesmoke;
+}
+
+
+/*
+.accept-member, .delete-member{
+    width: 47%;
+    justify-content: space-between;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: none;
+    background-color: white;
+}
+
+.member-icon{
+    font-size: 2.5em;
+    align-items: center;
+}
+*/
+.btn-select{
+    background-color: #333;
+}
+
+.no-members-to-see-div{
+    width: 100%;
+    float: left;
+}
+
+.no-invited-to-see-span, .no-participator-to-see-span, .no-solicitor-to-see-span{
+    width: 56%;
+    float: left;
+    font-size: 1.7em;
+    margin-left: 22.5%;
+}
+
+.no-invited-to-see-span{
+    margin-top: 3%;
+}
+
+.no-participator-to-see-span{
+    width: 57%;
+    margin-left: 21.5%;
+}
+
+.no-solicitor-to-see-span{
+    width: 64%;
+    margin-left: 18%;
+}
+
+/*FIM DE GERRIR OS MEMBROS DO PROJETO*/
+
+/*Animação "pulsar" dos icones favoritar e like*/
+.pulse {
+    animation: pulse 0.7s infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(200%);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    100% {
+      transform: scale(1.1);
+      filter: brightness(200%);
+    }
+  }
+
+/* PÁGINA DO ADMINISTRADOR */
+
+.container-admin{
+    background-color: whitesmoke;
+    float: left;
+    width: 100%;
+    margin-top: 0.5%;
+    border-radius: 8px;
+}
+
+#final-container{
+    margin-bottom: 5%;
+}
+
+.manage-timeout{
+    font-size: 1.2em;
+    float: left;
+    width: 47%;
+    margin-left: 3%;
+    margin-top: 2.5%;
+}
+
+.mini-container{
+    float: right;
+    margin-right: 3%;
+    width: 46%;
+    margin-bottom: 2%;
+}
+
+.input-admin{
+    float: left;
+    width: 70%;
+    font-size: 1.1em;
+    padding: 1%;
+    border: none;
+    border-radius: 8px;
+   
+}
+
+.save-admin{
+    float: right;
+    font-size: 1.1em;
+    padding: 1%;
+    width: 28%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a21920;
+    color: whitesmoke;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.save-admin:hover{
+    background-color: #E0AFA0;
+    transition: all 0.4s;
+}
+
+.manage-users{
+    font-size: 1.2em;
+    float: left;
+    margin-left: 3%;
+    width: 18%;
+    margin-bottom: 0.5%;
+}
+
+#feedback-manage{
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+
+.search-users-admin{
+    float: left;
+    margin-left: 3%;
+    width: 94%;
+    margin-bottom: 0.5%;
+}
+
+.input-name-or-nickname-one-admin{
+    width: 83%;
+    
+}
+
+.results-user-admin{
+    width: 85%;
+    float: left;
+}
+
+.admin-btns-container{
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 0.5%;
+    float: left;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.all-users-in-il{
+    float: left;
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+
+.user-to-see{
+    width: 99%;
+    float: left;
+    margin: 0.5%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.user-to-see:hover{
+    transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.is-admin{
+    border: #a21920 1px solid;
+}
+
+.user-image-admin{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    float: left;
+    margin: 1.5%;
+    cursor: pointer;
+}
+
+.user-name-admin{
+    font-size: 1.1em;
+    float: left;
+    margin-left: 2%;
+    width: 80%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.admin-btn-action{
+    font-size: 0.9em;
+    width: 80%;
+    margin-bottom: 2%;
+    padding: 1%;
+    margin-left: 2%;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.admin-btn-action:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+}
+
+.button-admin-page{
+    width: 31%;
+    font-size: 1.1em;
+    padding: 1%;
+    margin: 1%;
+    border: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #a21920;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.button-admin-page:hover{
+    transition: all 0.4s;
+    background-color: #E0AFA0;
+    color: whitesmoke;
+}
+
+.users-list-admin{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+/* FIM DA PÁGINA DO ADMINISTRADOR */
+
+/*INICIO FOOTER*/
+.footer{
+    float: left;
+    width: 87%;
+    margin-left: 6.5%;
+}
+
+.footer-content{
+    font-size: 0.6em;
+    float: right;
+    color: #666666;
+    cursor: pointer;
+}
+
+.footer-content:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*FIM FOOTER*/
+
+.error-edit-forum{
+    float: left;
+    font-size: 1.4em;
+    color: #a21920;
+    width: 20%;
+    margin: 10%;
+    margin-left: 40%;
+}
+
+.width-aux{
+    width: fit-content;
+}

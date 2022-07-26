@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <script
+      src="https://kit.fontawesome.com/6c109bd4c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Página Pessoal</title>
+</head>
+<body>
+    <div class="menu">
+        <h5 class="brand">Innovation Lab</h5>
+
+        <div class="icon-menu">
+            <div class="dropdown" id="add-dropdown-container">
+                <i class="fa-solid fa-circle-plus"></i>
+                <div class="dropdown-content">
+                    <a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+                    <a href="new-forum.html?tp=nec" id="add-necessity"
+                        >Adicionar Necessidade</a
+                    >
+                    <a href="new-project.html" id="add-project">Adicionar Projeto</a>
+                </div>
+            </div>
+
+            <span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+                <i class="fa-solid fa-house-chimney"></i>
+            </span>
+            <span data-tooltip="Feed de Projetos" id="feed-projects">
+                <i class="fa-solid fa-folder-open"></i>
+            </span>
+            <span data-tooltip="Notificações" id="feed-notifications">
+                <i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+            </span>
+            <span data-tooltip="Mensagens" id="my-messages">
+                <i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+            </span>
+
+            <div class="dropdown" id="user-dropdown-container">
+                <img id="profile-image" />
+
+                <div class="dropdown-content" id="box-photo-dropdown" >
+                    <!-- as ações estão em utilities.js -->
+                    <a id="my-profile">Ver Perfil</a>
+                    <a id="edit-my-profile">Editar Perfil</a>
+                    <a id="privacy">Privacidade e Segurança</a>
+                    <a id="my-favorites">Favoritos</a>
+                    <a id="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <button class="finished-btn hide" id="go-back-to-edit">VOLTAR</button>
+        <div class="user-profile-page">
+            <div class="user-pic-and-name">
+                <img
+                id="profile-image-picture"
+                src=""
+                />
+                <p class="user-full-name"></p>
+                <p class="user-nickname"></p>
+                <hr class="personal-profile-hr">
+                <p class="user-workplace"></p>
+            </div>
+            <button class="edit-profile hide" id="edit-profile-btn" data-tooltip="Editar perfil"><i class="fa-solid fa-gear"></i></button>
+            <button class="edit-profile hide" id="see-favorites-list-btn" data-tooltip="Favoritos"><i class="fa-solid fa-heart"></i></button>
+            <div class="user-caracteristics">
+                <p class="user-biography-label">Biografia:</p>
+                <p class="user-biography"></p>
+                <p class="user-availability-label">Disponibilidade: <p class="user-availability" id="user-availability"></p></p>
+                <p class="user-skill-list">Skills de <span id="user-name-span-skill"></span></p>
+                <div class="user-skill-container">
+                    <!--<span class="user-skill" id="1">Teste</span>
+                    <span class="user-skill" id="2">Teste</span>
+                    <span class="user-skill" id="3">Teste</span>
+                    <span class="user-skill" id="4">Teste</span>-->
+                </div>
+                <p class="user-interest-list">Interesses de <span id="user-name-span-interest"></span></p>
+                <div class="user-interest-container">
+                    <!--<span class="user-interest" id="1">Teste</span>
+                    <span class="user-interest" id="2">Teste</span>
+                    <span class="user-interest" id="3">Teste</span>
+                    <span class="user-interest" id="4">Teste</span>-->
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--<div class="user-favorites">
+            <h6 class="user-favorites-label">Lista de Favoritos:</h6>
+            <div class="user-favorites-buttons">
+                <button class="favorites-btn" id="favorite-ideas">IDEIAS</button>
+                <button class="favorites-btn" id="favorite-necessities">NECESSIDADES</button>
+                <button class="favorites-btn" id="favorite-projects">PROJETOS</button>
+            </div>
+        </div>-->
+
+        <div class="user-envolved">
+            <h6 class="user-envolved-label">Conteúdos em que <span class="user-name-envolved" id="user-name-envolved"></span> está envolvido:</h6>
+            <div class="user-registered-buttons">
+                <button class="registered-btn" id="registered-ideas">IDEIAS</button>
+                <button class="registered-btn" id="registered-necessities">NECESSIDADES</button>
+                <button class="registered-btn" id="registered-projects">PROJETOS</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <span class="footer-content">Sobre o Innovation Lab</span>
+    </footer>
+    <script src="utilities.js"></script>
+    <script src="controller.js"></script>
+    <script src="personal-page.js"></script>
+  </body>
+</html>

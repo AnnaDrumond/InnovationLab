@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<title>Esqueci a password</title>
+	</head>
+	<body>
+		<div class="logotipo">
+			<img class="logo" src="fundo-critical-arranjado.png" />
+		</div>
+
+		<div class="container">
+			<div class="container-info">
+				<h1 class="innovation-lab">Innovation Lab</h1>
+				<h4 id="h4-label">O lugar onde as tuas ideias vão mais longe</h4>
+				<h4>Esquescete-te da tua Password?</h4>
+
+				<div class="loading hide">
+					<!-- spinner -->
+					<div class="spinner">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				
+				<div class="div-warning-forgotpwd">
+					<!-- aqui entra a respetiva mensagem de erro -->
+				</div>
+
+				<div class="container-forgot-pwd">
+					<p>Introduz o teu email para te ajudarmos a recuperá-la!</p>
+
+					<input type="email" id="email" placeholder="email" />
+					<div id="forgot-pwd-container">
+						<button id="send-btn">ENVIAR EMAIL</button>
+						<button id="return-btn">VOLTAR</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="forgot-pwd.js"></script>
+		<script src="controller.js"></script>
+	</body>
+</html>
