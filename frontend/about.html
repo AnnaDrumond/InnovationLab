@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<link rel="stylesheet" media="screen" type="text/css" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/6c109bd4c4.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Sobre</title>
+	</head>
+	<body>
+		<!-- inicio menu -->
+		<div class="menu">
+			<h5 class="brand">Innovation Lab</h5>
+
+			<div class="icon-menu">
+				<div class="dropdown" id="add-dropdown-container">
+					<i class="fa-solid fa-circle-plus"></i>
+					<div class="dropdown-content">
+						<a href="new-forum.html?tp=id" id="add-idea">Adicionar Ideia</a>
+						<a href="new-forum.html?tp=nec" id="add-necessity"
+							>Adicionar Necessidade</a
+						>
+						<a href="new-project.html" id="add-project">Adicionar Projeto</a>
+					</div>
+				</div>
+
+				<span data-tooltip="Feed de Ideias e Necessidades" id="feed-forum">
+					<i class="fa-solid fa-house-chimney"></i>
+				</span>
+				<span data-tooltip="Feed de Projetos" id="feed-projects">
+					<i class="fa-solid fa-folder-open"></i>
+				</span>
+				<span data-tooltip="Notificações" id="feed-notifications">
+					<i class="fa-solid fa-bell"></i><span class="notification-number hide">0</span>
+				</span>
+				<span data-tooltip="Mensagens" id="my-messages">
+					<i class="fa-solid fa-envelope"></i><span class="message-number hide">0</span>
+				</span>
+
+				<div class="dropdown" id="user-dropdown-container">
+					<img id="profile-image" />
+
+					<div class="dropdown-content" id="box-photo-dropdown" >
+						<!-- as ações estão em utilities.js -->
+						<a id="my-profile">Ver Perfil</a>
+						<a id="edit-my-profile">Editar Perfil</a>
+						<a id="privacy">Privacidade e Segurança</a>
+						<a id="my-favorites">Favoritos</a>
+						<a id="logout">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fim menu -->
+		<div class="body" id="content-about">
+			<div class="title-about">
+				<div class="about-title">
+					<p class="title">Saiba mais sobre o projeto Innovation Lab</p>
+				</div>
+			</div>
+
+			<div class="content-container">
+				<div class="card-about">
+                    <img src="./titans/titans-about.png"class="titan-about" alt="">
+					<p class="content-about">
+						A Innovation Lab é uma empresa tecnológica que se quer manter na vanguarda da
+						inovação e excelência, baseando-se na confiança nas suas pessoas, nas suas capacidades
+						e na vivência dos valores que os unem e guiam.
+					</p>
+                   
+                    <p class="content-about">
+                        Sabemos que a força
+						nasce da partilha de ideias, da colaboração, do entusiasmo pela
+						criação e inovação, do querer ir mais além. E reconhece que
+						é fundamental proporcionar às suas pessoas a possibilidade e os
+						meios para investigar, criar, experimentar e exercitar sua criatividade.
+                    </p>
+
+                    
+					<p class="content-about">
+						É neste pensamento que nasceu o projeto Innovation
+						Lab: um ambiente que nutre e suporta o encontro e partilha de ideias
+						criativas e inovadoras, fornecendo um ponto de conjunção entre
+						interesses, conhecimento e competências, proporcionado o espaço e as
+						ferramentas para o desenvolvimento e implementação de projetos
+						focados não no desenvolvimento de negócio, mas na aprendizagem e na
+						contribuição para o crescimento da comunidade.
+					</p>
+
+                    <p class="content-about">
+						O projeto Innovation Lab permite facilmente uma troca e 
+                        interação entre os vários participantes, transformando idéias em realidade.
+					</p>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="footer-content">Sobre o Innovation Lab</span>
+		</footer>
+		<script src="controller.js"></script>
+		<script src="utilities.js"></script>
+		<script src="about.js"></script>
+	</body>
+</html>
